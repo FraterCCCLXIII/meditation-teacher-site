@@ -1,0 +1,849 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Bloch | Nondual Meditation Teacher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJL531V88W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QJL531V88W');
+</script>
+ 
+  <!-- Main CSS File -->
+  <link href="styles.css" rel="stylesheet">
+  
+</head>
+<body>
+  <!-- Subscription Modal -->
+  <div id="subscription-modal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-image">
+        <img src="img/background-water1.jpg" alt="Subscribe to Paul's newsletter">
+      </div>
+      <div class="modal-content">
+        <h2>Join My Newsletter</h2>
+        <p>Get the latest insights on spirituality, meditation, and nondual teachings delivered directly to your inbox.</p>
+        <div class="subscription-form">
+          <iframe src="https://paulbloch.substack.com/embed" width="100%" height="150" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <a href="https://paulbloch.substack.com/" target="_blank" class="btn-outline">Visit My Substack</a>
+        <div>
+          <a class="dismiss-link" id="dismiss-modal">No thanks, maybe later</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation Modal -->
+<div id="confirmation-modal" class="modal-overlay">
+    <div class="modal-container">
+        <div class="modal-image">
+            <img src="img/paul8.jpg" alt="Message sent confirmation">
+        </div>
+        <div class="modal-content">
+            <h2>Message Sent!</h2>
+            <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+            <button class="btn-outline" id="dismiss-confirmation">Close</button>
+        </div>
+    </div>
+</div>
+
+  <!-- Optional: Floating Subscribe Button -->
+  <div class="subscribe-button">
+    <a href="#" class="btn-outline" id="show-modal-btn">Subscribe to Newsletter</a>
+  </div>
+
+  <script>
+    // Get the modal elements
+    const modal = document.getElementById('subscription-modal');
+    const dismissBtn = document.getElementById('dismiss-modal');
+    const showModalBtn = document.getElementById('show-modal-btn');
+    
+    // Function to show the modal
+    function showModal() {
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    }
+    
+    // Function to hide the modal
+    function hideModal() {
+      modal.classList.remove('show');
+      document.body.style.overflow = ''; // Re-enable scrolling
+      
+      // Set a cookie to remember that the user has seen the modal
+      document.cookie = "subscriptionModalShown=true; max-age=86400"; // 24 hours
+    }
+    
+    // Check if the modal has been shown before
+    function hasModalBeenShown() {
+      return document.cookie.split(';').some(item => item.trim().startsWith('subscriptionModalShown='));
+    }
+    
+    // Event listeners
+    dismissBtn.addEventListener('click', hideModal);
+    showModalBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      showModal();
+    });
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        hideModal();
+      }
+    });
+    
+    // Show the modal after 3 seconds if it hasn't been shown before
+    window.addEventListener('load', function() {
+      if (!hasModalBeenShown()) {
+        setTimeout(showModal, 3000);
+      }
+    });
+  </script>
+
+    </style>
+
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <div class="logo gilda-display-regular">Presence
+                <!-- <p>Artist, Inventor, Philosopher, Futurist, DJ, Hatmaker, Nondual Kinda Guy</p> -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <!-- <li><a href="#art">Art</a></li> -->
+                <!-- <li><a href="#meditation">Meditation</a></li> -->
+                <li><a href="#mentorship">Mentorship</a></li>
+                <li><a href="#offerings">Work With Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="img/background-meditation3.jpg" alt="Meditation on the beach" style="width: 100%; height: 100%; object-fit: cover; position: absolute;">
+        <div class="hero-overlay"></div>
+        <div class="container" style="position: relative; z-index: 2; padding-top: 10%;">
+            <div style="text-align: left;">
+                <h1>Experience the power of meditation</h1>
+                <p>Explore spirituality, meditation, and transformative philosophy with Paul Bloch.</p>
+                <a href="#about" class="btn">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+<section id="introduction" class="intro-section" style="padding-top: 8rem; padding-bottom: 4rem; background-color: #f9f7f5;">
+    <div class="container">
+        <div class="intro-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2>
+                Finding The Way
+            </h2>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 2rem;">
+                I'm Paul Bloch - an artist and guide to embodied awakening and discovering your authentic expression. For over 20 years, I've been looking for the God who is already present beneath the stories of who we think we are. My approach connects ancient wisdom and religion with a contemporary understanding of life, consciousness, and the universe we live in. I believe heaven on earth is possible—but it will take our wholes selves to co-create it with God. My goal is to clarify The Way, to help make a spiritual realization accessible, and give confidence and support along the path. Real transformation often contradicts what we think we know about how to change. I'm here as a guide to point out the part of yourself that is always free—and always will be free.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="#about" class="btn">My Story</a>
+                <a href="#philosophy" class="btn-outline">Core Teachings</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Events Section -->
+    <section id="events" class="events" style="padding: 6rem 0;">
+        <div class="container">
+            <div class="section-header" style="text-align: left;">
+                <h2>Upcoming Events</h2>
+                <p>Join me for transformative experiences online and in-person</p>
+            </div>
+            <div class="events-container">
+                <div class="event-card">
+                    <img src="img/background-aya.jpg" alt="Weekend Retreat" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="event-overlay">
+                        <div class="event-date">May 15-17, 2025</div>
+                        <h3>Weekend Retreat: The Art of Presence</h3>
+                        <p>An immersive weekend exploring the fundamentals of nondual awareness through meditation, dialogue, and contemplative exercises.</p>
+                        <p><strong>Location:</strong> TBA</p>
+                        <a href="#" class="btn">Register</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="img/background-clouds.jpg" alt="Online Meditation" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="event-overlay">
+                        <div class="event-date">Every Tuesday, 8-9pm ET</div>
+                        <h3>Online Meditation Circle</h3>
+                        <p>A weekly gathering for guided meditation and exploration of nondual teachings, open to practitioners of all levels.</p>
+                        <p><strong>Location:</strong> Zoom</p>
+                        <a href="#" class="btn">Join</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="img/background-yantra.jpg" alt="Silent Meditation Retreat" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="event-overlay">
+                        <div class="event-date">June 10-20, 2025</div>
+                        <h3>10-Day Silent Meditation Intensive</h3>
+                        <p>A profound journey into the depths of consciousness through extended periods of meditation and contemplative inquiry.</p>
+                        <p><strong>Location:</strong> TBA</p>
+                        <a href="#" class="btn">Apply</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- About Section -->
+        <section id="about" class="about" style="padding: 6rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align: left;">
+                    <h2>Finding my Way</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>As a dedicated meditation teacher with over two decades of experience, I guide students through the transformative journey of nondual awareness and spiritual awakening.</p>
+                        
+                        <p>My path has been shaped by training in Tibetan traditions, ordination as a Zen monk, and extensive studies in California and Japan. My approach integrates independent studies of nondual traditions across Eurasia, with an emphasis on Stoic and Neoplatonic philosophy, as well as Eastern Tantric traditions like Kashmir Shaivism.</p>
+                        
+                        <p>For over 20 years, I studied with the renowned nondual teacher Andrew Cohen (student of Papaji and Ramana Maharishi), supporting his organization Manifest Nirvana during his final years and spending formative time in Tiruvanamalai, India with him, his wife Alka Arora, and main pupil Daniela Bomatter.</p>
+                        
+                        <p>As the co-founder of the ICON conference (Integral Conference of North America), I've created spaces for integral theorists and metamodernists to gather and exchange ideas biannually.</p>
+                        
+                        <p>My teaching emphasizes the integration of ancient wisdom with contemporary understanding, positioning nondual awareness not as an esoteric concept but as the natural birthright of every human being.</p>
+                        
+                        <a href="#contact" class="btn">Book a Session</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="img/paul6.jpg" alt="Paul Bloch">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experiences</h2>
+            </div>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Paul's teachings have transformed my understanding of meditation. His ability to bridge Eastern and Western philosophical traditions while maintaining practical relevance is truly remarkable."</p>
+                    <p class="testimonial-author">— SJ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <img src="img/background-ocean3.jpg" alt="Meditation on the beach" style="width: 100%; height: 100%; object-fit: cover; position: absolute;">
+            <div class="hero-content">
+                <h1 style="font-size: 4.5rem;">You can experience liberation without being perfect first.</h1>
+            </div>
+        </section>
+
+    <!-- Teachings Section -->
+    <section id="philosophy" class="teachings" style="padding: 6rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Teachings</h2>
+                <p>Exploring the landscape of consciousness through direct experience</p>
+            </div>
+            <div class="teachings-container">
+                <div class="teaching-card">
+                    <i class="fas fa-om"></i>
+                    <h3>Nondual Meditation</h3>
+                    <p>Experience the seamless unity of awareness and phenomena through meditation practices that dissolve the illusion of separation between self and other, subject and object.</p>
+                </div>
+                <div class="teaching-card">
+                    <i class="fas fa-mountain"></i>
+                    <h3>Direct Path Awakening</h3>
+                    <p>Engage with practical methods for recognizing your true nature directly, without unnecessary conceptual elaboration or prolonged preparatory practices.</p>
+                </div>
+                <div class="teaching-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Heart-Centered Presence</h3>
+                    <p>Cultivate a profound openness of heart that embraces all experiences with compassionate acceptance while maintaining clear discernment.</p>
+                </div>
+                <div class="teaching-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Evolutionary Spirituality</h3>
+                    <p>Discover how awakening consciousness can participate consciously in the evolutionary process, integrating being and becoming in a dynamic relationship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentorship Section -->
+    <section id="mentorship" class="mentorship" style="padding: 6rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>1-on-1 Mentorship</h2>
+                <h3>Personal guidance for your spiritual journey</h3>
+            </div>
+            
+            <div class="mentorship-content">
+                <div class="mentorship-text">
+                    <p>In Sanskrit, there's a beautiful word — <em>Kalyanamitra</em> — which means "spiritual friend." This describes the relationship I cultivate with mentees: not an authority figure elevated on a pedestal, but a compassionate companion walking alongside you on the path.</p>
+                    
+                    <p>One-on-one mentorship provides personalized guidance for practitioners who are ready to graduate from occasional meditation sessions and commit to deepening their practice. Together, we navigate both the heights of spiritual insight and the practical challenges of integrating awareness into everyday life.</p>
+                    
+                    <div class="emphasis-box">
+                        <h3>My Approach to Student-Teacher Dynamics</h3>
+                        <p>The traditional guru-disciple model can be problematic in contemporary contexts. My approach emphasizes mutual respect, appropriate boundaries, and the recognition that awakening is your birthright, not something bestowed by a teacher.</p>
+                        
+                        <p>I view the teacher-student relationship as a context for recognizing our shared nature, not as a hierarchy of spiritual attainment. While I offer guidance based on experience, the ultimate authority in your journey is your own direct understanding.</p>
+                    </div>
+                    
+                    <h3>What Mentorship Includes:</h3>
+                    
+                    <div class="three-column">
+                        <div class="column-item">
+                            <h4>Practice Guidance</h4>
+                            <p>Refining meditation techniques, addressing obstacles, and deepening your understanding of nondual awareness.</p>
+                        </div>
+                        <div class="column-item">
+                            <h4>Applied Integration</h4>
+                            <p>Working with specific life situations where practice meets real-world challenges and opportunities.</p>
+                        </div>
+                        <div class="column-item">
+                            <h4>Study & Contemplation</h4>
+                            <p>Engaging with relevant teachings and texts that illuminate aspects of your current experience.</p>
+                        </div>
+                    </div>
+                    
+                    <p>Sessions take place via video call or in person when possible, typically meeting bi-weekly or monthly depending on your needs and schedule.</p>
+                    
+                    <a href="#contact" class="btn">Apply for Mentorship</a>
+                </div>
+                <div class="mentorship-image"><img src="img/paul6.jpg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sangha Section -->
+    <!-- <section id="sangha" class="sangha">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sangha: Community of Practice</h2>
+                <p>Walking the path together</p>
+            </div>
+            
+            <div class="sangha-container">
+                <div class="sangha-image"></div>
+                <div class="sangha-text">
+                    <p>The Buddha recognized that spiritual community (sangha) is not a luxury but a necessity for sustained practice and awakening. In an era of individualism and digital isolation, creating intentional spaces for authentic connection and collective inquiry has never been more essential.</p>
+                    
+                    <p>Our sangha is a diverse community of practitioners committed to awakening consciousness through direct experience and honest dialogue. We come together to meditate, study, celebrate, and support each other through the joys and challenges of the spiritual path.</p>
+                    
+                    <h3>Community Offerings:</h3>
+                    
+                    <div class="three-column">
+                        <div class="column-item">
+                            <h4>Weekly Meditation</h4>
+                            <p>Guided sitting practice followed by dharma exploration every Tuesday evening online and in select locations.</p>
+                        </div>
+                        <div class="column-item">
+                            <h4>Monthly Intensives</h4>
+                            <p>Deeper dives into practice on the first Saturday of each month, with extended meditation and teaching.</p>
+                        </div>
+                        <div class="column-item">
+                            <h4>Study Groups</h4>
+                            <p>Ongoing exploration of key texts and teachings from various contemplative traditions.</p>
+                        </div>
+                    </div>
+                    
+                    <p>Our community welcomes practitioners at all levels of experience. The only requirements are sincerity, respectful engagement, and a willingness to question your assumptions.</p>
+                    
+                    <div class="emphasis-box">
+                        <h3>Why Community Matters</h3>
+                        <p>In spiritual practice, we often encounter challenges that are difficult to navigate alone—states of confusion, resistance, or breakthrough experiences that need context and reflection. A sangha provides the mirror of relationship where we can see ourselves more clearly and receive support when the path becomes difficult.</p>
+                        
+                        <p>Through collective practice, we create a field of shared intention that amplifies individual efforts and reminds us that awakening is not just personal—it's a contribution to the evolution of consciousness itself.</p>
+                    </div>
+                    
+                    <a href="#events" class="btn">Join Our Next Gathering</a>
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+    <!-- Books Section -->
+    <!-- <section id="books" class="books">
+        <div class="container">
+            <div class="section-header">
+                <h2>Published Works</h2>
+                <p>Explorations of consciousness through the written word</p>
+            </div>
+            <div class="books-container">
+                <div class="book-card">
+                    <div class="book-image"></div>
+                    <h3>The Paradox of Being</h3>
+                    <p>An exploration of nondual awareness through the lens of both Eastern and Western contemplative traditions.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-image"></div>
+                    <h3>Meditation Beyond Method</h3>
+                    <p>A practical guide to transcending technique and discovering the natural state of awareness.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-image"></div>
+                    <h3>The Integral Vision</h3>
+                    <p>A comprehensive framework for understanding the evolution of consciousness in individuals and collectives.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+  
+
+    <!-- Podcast Section -->
+    <!-- <section id="podcast" class="podcast">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Nondual Dialogues Podcast</h2>
+                <p>Conversations at the intersection of wisdom, creativity, and evolution</p>
+            </div>
+            <div class="podcast-episodes">
+                <div class="podcast-episode">
+                    <h3 class="podcast-title">The Paradox of Effort and Effortlessness</h3>
+                    <p class="podcast-date">April 15, 2025</p>
+                    <p>Exploring the delicate balance between intentional practice and allowing natural awareness to reveal itself.</p>
+                    <a href="#" class="btn">Listen</a>
+                </div>
+                <div class="podcast-episode">
+                    <h3 class="podcast-title">Embodying Nonduality in Relationship</h3>
+                    <p class="podcast-date">March 28, 2025</p>
+                    <p>How nondual awareness transforms our interactions and creates space for authentic connection.</p>
+                    <a href="#" class="btn">Listen</a>
+                </div>
+                <div class="podcast-episode">
+                    <h3 class="podcast-title">Creativity as Spiritual Practice</h3>
+                    <p class="podcast-date">March 10, 2025</p>
+                    <p>A conversation with visual artist Maya Lin about the intersection of creative expression and spiritual awakening.</p>
+                    <a href="#" class="btn">Listen</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+                            <!-- Vertically Centered Split Section -->
+<!-- <section id="centered-split" class="centered-split">
+    <div class="container">
+        <div class="split-content">
+            <div class="split-image">
+                <img src="img/background-beachfeet.jpg" alt="Description">
+            </div>
+            <div class="split-text">
+                <div class="text-wrapper">
+                    <h2>Centered Content</h2>
+                    <p>This version ensures the text content is perfectly vertically centered regardless of image height.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+        <!-- Work With Me / Offerings Section -->
+        <section id="offerings" class="offerings" style="padding: 6rem 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Let's collaborate in consciousness</h2>
+                    <p>Offerings to support our personal and collective journey of awakening and embodiment</p>
+                </div>
+    
+                <div class="offering-container">
+                    <div class="offering-header">
+                        <div class="offering-icon">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h3>Speaking & Keynotes</h3>
+                    </div>
+                    <div class="offering-details">
+                        <p>Drawing from over two decades of immersion in contemplative traditions and contemporary wisdom teachings, I offer engaging keynote presentations that bridge ancient philosophy with modern life challenges. My talks are designed to be accessible yet profound, integrating storytelling, practical wisdom, and occasional bursts of humor to illuminate the path of conscious evolution.</p>
+                        
+                        <p>I speak at conferences, corporate events, universities, and intimate gatherings worldwide on topics including:</p>
+                        
+                        <div class="three-column">
+                            <div class="column-item">
+                                <h4>Nondual Awareness</h4>
+                                <p>Exploring the direct experience of unitive consciousness beyond conceptual frameworks.</p>
+                            </div>
+                            <div class="column-item">
+                                <h4>Evolutionary Spirituality</h4>
+                                <p>Integrating ancient wisdom with contemporary understanding of human development.</p>
+                            </div>
+                            <div class="column-item">
+                                <h4>The Creative Process</h4>
+                                <p>Navigating the territory where spiritual insight meets artistic expression.</p>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="btn">Inquire About Speaking</a>
+                    </div>
+                </div>
+    
+                <div class="offering-container">
+                    <div class="offering-header">
+                        <div class="offering-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Meditation Instruction</h3>
+                    </div>
+                    <div class="offering-details">
+                        <p>Meditation is both an art and a science—a direct path to recognizing our true nature and a practical tool for navigating daily life. My approach to meditation instruction is rooted in traditional contemplative methods while remaining contemporary and accessible.</p>
+                        
+                        <p>I offer meditation instruction in various contexts:</p>
+                        
+                        <div class="three-column">
+                            <div class="column-item">
+                                <h4>Corporate & Organizations</h4>
+                                <p>Tailored programs that introduce meditation as a tool for clarity, creativity, and resilience in professional environments.</p>
+                            </div>
+                            <div class="column-item">
+                                <h4>Beginner Workshops</h4>
+                                <p>Foundational instruction for those new to meditation, focusing on establishing a sustainable practice.</p>
+                            </div>
+                            <div class="column-item">
+                                <h4>Advanced Retreats</h4>
+                                <p>Immersive experiences for experienced practitioners looking to deepen their understanding and practice.</p>
+                            </div>
+                        </div>
+                        
+                        <p>Whether you're seeking to begin a meditation practice or deepen an existing one, I provide clear guidance that honors both traditional lineages and contemporary scientific understanding.</p>
+                        
+                        <a href="#contact" class="btn">Schedule Meditation Instruction</a>
+                    </div>
+                </div>
+    
+                <div class="offering-container">
+                    <div class="offering-header">
+                        <div class="offering-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Workshops & Intensives</h3>
+                    </div>
+                    <div class="offering-details">
+                        <p>These immersive experiences combine theory and practice, providing a container for transformative insight and embodied understanding. Each workshop creates a field of collective inquiry where participants can explore the territory of consciousness directly.</p>
+                        
+                        <div class="three-column">
+                            <div class="column-item">
+                                <h4>Weekend Intensives</h4>
+                                <p>Deep dives into specific aspects of nondual teachings and practices over 2-3 days.</p>
+                            </div>
+                            <div class="column-item">
+                                <h4>Week-long Retreats</h4>
+                                <p>Extended immersions that allow for progressive deepening of practice and understanding.</p>
+                            </div>
+                            <div class="column-item">
+                                <h4>Online Courses</h4>
+                                <p>Structured learning experiences that unfold over multiple sessions, accessible from anywhere.</p>
+                            </div>
+                        </div>
+                        
+                        <a href="#events" class="btn">View Upcoming Workshops</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="two-column image-left">
+            <div class="image-container">
+              <img src="img/background-lotus.jpg" alt="Meditation practice">
+            </div>
+            <div class="text-container">
+              <div class="text-content">
+                <h2>Discover Nondual Awareness</h2>
+                <p>Experience the seamless unity of awareness beyond concepts of self and other. My approach makes profound realization accessible through direct experience rather than complex philosophy.</p>
+                <a href="#contact" class="btn">Learn More</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="two-column image-right">
+            <div class="text-container">
+              <div class="text-content">
+                <h2>20 Years of Spiritual Guidance</h2>
+                <p>Trained in Tibetan traditions and ordained as a Zen monk, I've spent decades guiding students through the transformative journey of awakening. My teaching integrates ancient wisdom with contemporary understanding.</p>
+                <a href="#about" class="btn">My Story</a>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="img/background-candles1.jpg" alt="Spiritual practice">
+            </div>
+          </section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact" style="padding: 6rem 0; background-color: white;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Connect With Me</h2>
+            <p>For inquiries about private sessions, speaking engagements, or retreat participation</p>
+        </div>
+        <div class="contact-form">
+            <form id="contactForm" action="https://formspree.io/f/meogqgly" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+                <div id="form-status" style="margin-top: 1rem;"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo gilda-display-regular">Presence</div>
+            <p>Meditation Teacher | Author | Creative Nondual Guide</p>
+            
+            <div class="newsletter">
+                <h3>Join My Newsletter</h3>
+                <p>Receive insights, event updates, and meditation guidance</p>
+                <a href="https://paulbloch.substack.com/" class="btn" target="_blank">Subscribe on Substack</a>
+            </div>
+            
+            <ul class="footer-links">
+                <li><a href="https://substack.com/paulbloch"><i class="fa-solid fa-rainbow"></i></i></a></li>
+                <li><a href="https://instagram.com/paulbloch"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://youtube.com/paulstuartbloch"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://open.spotify.com/user/1241195035?si=62908d7d33c44651"><i class="fab fa-spotify"></i></a></li>
+                <li><a href="https://x.com/paulstuartbloch"><i class="fab fa-x-twitter"></i></a></li>
+            </ul>
+            
+            <p>&copy; 2025 Paul Bloch. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when a nav link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(249, 247, 245, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.backgroundColor = 'rgba(249, 247, 245, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+
+    <script>
+      // Contact form handling
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('form-status');
+const confirmationModal = document.getElementById('confirmation-modal');
+const dismissConfirmation = document.getElementById('dismiss-confirmation');
+
+// Function to show confirmation modal
+function showConfirmation() {
+    confirmationModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+// Function to hide confirmation modal
+function hideConfirmation() {
+    confirmationModal.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+// Event listener for confirmation modal dismiss button
+if (dismissConfirmation) {
+    dismissConfirmation.addEventListener('click', hideConfirmation);
+}
+
+// Close modal when clicking outside
+if (confirmationModal) {
+    confirmationModal.addEventListener('click', function(e) {
+        if (e.target === confirmationModal) {
+            hideConfirmation();
+        }
+    });
+}
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        
+        // Show loading state
+        formStatus.innerHTML = '<p>Message Sent!</p>';
+        
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Show confirmation modal instead of inline message
+                showConfirmation();
+                contactForm.reset();
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        })
+        .catch(error => {
+            formStatus.innerHTML = '<p style="color:red;">There was a problem sending your message. Please try again later.</p>';
+        });
+    });
+}
+    </script>
+
+<script>
+    // Initialize AOS (Animate On Scroll) library
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+    
+      // Carousel functionality
+      const track = document.querySelector('.carousel-track');
+      const cards = document.querySelectorAll('.carousel-card');
+      const prevBtn = document.querySelector('.carousel-prev');
+      const nextBtn = document.querySelector('.carousel-next');
+      let currentPosition = 0;
+      const cardWidth = cards[0].offsetWidth + 32; // include gap
+    
+      nextBtn.addEventListener('click', () => {
+        currentPosition -= cardWidth;
+        if (currentPosition < - (cards.length - 3) * cardWidth) {
+          currentPosition = 0;
+        }
+        track.style.transform = `translateX(${currentPosition}px)`;
+      });
+    
+      prevBtn.addEventListener('click', () => {
+        currentPosition += cardWidth;
+        if (currentPosition > 0) {
+          currentPosition = - (cards.length - 3) * cardWidth;
+        }
+        track.style.transform = `translateX(${currentPosition}px)`;
+      });
+    
+      // Audio player functionality
+      const playButtons = document.querySelectorAll('.play-button, .play-pause');
+      playButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const audioPlayer = this.closest('.episode-card').querySelector('audio');
+          const playPause = this.closest('.audio-player')?.querySelector('.play-pause');
+          
+          if (audioPlayer.paused) {
+            audioPlayer.play();
+            if (playPause) playPause.innerHTML = '<i class="fas fa-pause"></i>';
+            if (this.classList.contains('play-button')) {
+              this.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+          } else {
+            audioPlayer.pause();
+            if (playPause) playPause.innerHTML = '<i class="fas fa-play"></i>';
+            if (this.classList.contains('play-button')) {
+              this.innerHTML = '<i class="fas fa-play"></i>';
+            }
+          }
+        });
+      });
+    
+      // Update progress bars for audio players
+      document.querySelectorAll('audio').forEach(audio => {
+        const progressBar = audio.closest('.audio-player').querySelector('.progress');
+        const timeDisplay = audio.closest('.audio-player').querySelector('.time');
+        
+        audio.addEventListener('timeupdate', function() {
+          const percent = (audio.currentTime / audio.duration) * 100;
+          progressBar.style.width = percent + '%';
+          
+          // Update time display
+          const minutes = Math.floor(audio.currentTime / 60);
+          const seconds = Math.floor(audio.currentTime % 60);
+          timeDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        });
+      });
+    });
+    </script>
+
+</body>
+</html>

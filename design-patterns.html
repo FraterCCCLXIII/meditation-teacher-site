@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Patterns | Meditation Teacher Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Design Patterns Collection -->
+    
+    <!-- Substack Section -->
+    <section id="substack" class="substack-section">
+        <div class="container">
+            <div class="section-header" style="text-align: left;">
+                <h2>Latest Writings</h2>
+                <p>Insights and reflections on culture, art, nonduality, meditation, and spiritual practice.</p>
+            </div>
+            <div id="substack-feed-embed">
+                <div>
+    <div class="csw-branding" style="padding:24px;border:1px solid #e5e5e5;border-radius:12px;background:#fafafa;text-align:center;font-family: system-ui,sans-serif !important;">
+    <h3 style="margin:0 0 8px; color:#111; font-family: system-ui,sans-serif !important;">
+      Your Feed Embed has expired.
+    </h3>
+    <p style="margin:0 0 16px; color:#555; font-family: system-ui,sans-serif !important;">
+      If you're the owner of this site, please create your new embed on Supascribe.
+    </p>
+    <a href="https://supascribe.com?from=legacy&amp;utm_source=migration-widget" target="_blank" style="display:inline-block;padding:10px 18px;background:#000;color:#fff;border-radius:6px;text-decoration:none; font-family: system-ui,sans-serif !important;">
+      Create New Embed →
+    </a>
+  </div>;
+  </div></div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://paulbloch.substack.com/" class="btn" target="_blank">Read More on Substack</a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Substack Section Styles (Basic layout - the widget itself has limited external styling) */
+        .substack-section {
+            background-color: var(--light-color);
+            padding: 5rem 0;
+        }
+
+        .substack-feed-widget .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    color: black;
+}
+
+        .substack-articles-container { /* This is likely no longer needed with the official widget */
+            list-style: none;
+            padding: 0;
+        }
+
+        /* You might be able to add some basic container styling if needed */
+        #substack-feed-embed {
+            /* Example: Adjust margins or alignment if needed */
+            margin-bottom: 2rem;
+        }
+
+        /* The rest of your existing CSS should apply to the section header and the "Read More" button */
+
+        /* Responsive adjustments for Substack section */
+        @media (max-width: 768px) {
+            .substack-section {
+                padding: 4rem 0;
+            }
+        }
+    </style>
+
+    <script>
+      window.SubstackFeedWidget = {
+        substackUrl: "paulbloch.substack.com",
+        posts: 3, // Adjust as needed
+        colors: {
+          primary: "var(--primary-color)", // #000000
+          secondary: "var(--accent-color)", // #000000
+          background: "var(--light-color)", // #000000
+        }
+      };
+    </script>
+    <script src="https://substackapi.com/embeds/feed.js" async></script>
+    
+    <!-- Centered Content Section -->
+    <section class="centered-content">
+        <div class="container">
+          <h2>Upcoming Events</h2>
+          <p class="subtitle">Join me for transformative experiences</p>
+          
+          <div class="content">
+            <p>Explore upcoming retreats, workshops, and meditation circles designed to deepen your practice and awaken consciousness.</p>
+            <a href="#events" class="btn">View Calendar</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card Grid Section -->
+      <section class="card-grid">
+        <div class="container">
+          <h2>Core Teachings</h2>
+          
+          <div class="cards">
+            <div class="card">
+              <i class="fas fa-om"></i>
+              <h3>Nondual Meditation</h3>
+              <p>Dissolve the illusion of separation between self and other through direct experience.</p>
+            </div>
+            
+            <div class="card">
+              <i class="fas fa-mountain"></i>
+              <h3>Direct Path</h3>
+              <p>Recognize your true nature without unnecessary conceptual elaboration.</p>
+            </div>
+            
+            <div class="card">
+              <i class="fas fa-heart"></i>
+              <h3>Heart Presence</h3>
+              <p>Cultivate profound openness that embraces all experiences with compassion.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials">
+        <div class="container">
+          <h2>Student Experiences</h2>
+          
+          <div class="testimonial-slider">
+            <div class="testimonial">
+              <blockquote>"Paul's teachings transformed my understanding of meditation. His ability to bridge traditions while maintaining practical relevance is remarkable."</blockquote>
+              <cite>— Sarah J.</cite>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Full Hero Section -->
+      <section class="full-hero">
+        <div class="hero-image">
+          <img src="img/background-hand.jpg" alt="Meditation practice">
+        </div>
+        <div class="hero-content">
+          <h1>Liberation is your birthright</h1>
+          <p>Begin the journey beyond limited self-concepts</p>
+          <a href="#mentorship" class="btn">Start Here</a>
+        </div>
+      </section>
+      
+      <!-- Books Section -->
+      <section class="books-section">
+        <div class="container">
+          <h2 class="section-title">Published Works</h2>
+          <p class="section-subtitle">Explore consciousness through the written word</p>
+          
+          <div class="books-grid">
+            <div class="book-card" data-aos="fade-up">
+              <div class="book-cover">
+                <img src="img/background-lotus.jpg" alt="The Paradox of Being">
+                <div class="book-overlay">
+                  <a href="#" class="btn-outline">Learn More</a>
+                </div>
+              </div>
+              <h3>The Paradox of Being</h3>
+              <p>Nondual awareness through Eastern and Western traditions</p>
+            </div>
+            
+            <div class="book-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="book-cover">
+                <img src="img/background-meditation2.jpg" alt="Meditation Beyond Method">
+                <div class="book-overlay">
+                  <a href="#" class="btn-outline">Learn More</a>
+                </div>
+              </div>
+              <h3>Meditation Beyond Method</h3>
+              <p>Discovering the natural state of awareness</p>
+            </div>
+            
+            <div class="book-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="book-cover">
+                <img src="img/background-mirrorsky.jpg" alt="The Integral Vision">
+                <div class="book-overlay">
+                  <a href="#" class="btn-outline">Learn More</a>
+                </div>
+              </div>
+              <h3>The Integral Vision</h3>
+              <p>Understanding the evolution of consciousness</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Podcast Section -->
+      <section class="podcast-section">
+        <div class="container">
+          <h2 class="section-title">The Nondual Dialogues</h2>
+          <p class="section-subtitle">Conversations at the intersection of wisdom and evolution</p>
+          
+          <div class="episodes-container">
+            <div class="episode-card" data-aos="fade-up">
+              <div class="episode-image">
+                <img src="img/background-incense1.jpg" alt="Podcast episode">
+                <button class="play-button">
+                  <i class="fas fa-play"></i>
+                </button>
+              </div>
+              <div class="episode-info">
+                <h3>The Paradox of Effort and Effortlessness</h3>
+                <p class="episode-date">April 15, 2025</p>
+                <p>Exploring the delicate balance between intentional practice and allowing natural awareness to reveal itself.</p>
+                <div class="audio-player">
+                  <audio src="audio/episode1.mp3"></audio>
+                  <div class="player-controls">
+                    <button class="play-pause">
+                      <i class="fas fa-play"></i>
+                    </button>
+                    <div class="progress-bar">
+                      <div class="progress"></div>
+                    </div>
+                    <span class="time">00:00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <a href="#" class="btn">Browse All Episodes</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Articles Section -->
+      <section class="articles-section">
+        <div class="container">
+          <h2 class="section-title">Latest Writings</h2>
+          <p class="section-subtitle">Insights on spirituality and meditation</p>
+          
+          <div class="articles-grid">
+            <article class="article-card" data-aos="fade-up">
+              <div class="article-image">
+                <img src="img/background-lotus2.jpg" alt="Article thumbnail">
+              </div>
+              <div class="article-content">
+                <h3><a href="#">The Direct Path to Awakening</a></h3>
+                <p class="article-meta">May 5, 2025 • 8 min read</p>
+                <p>How to recognize your true nature without unnecessary conceptual elaboration or prolonged preparatory practices.</p>
+                <a href="#" class="read-more">Continue Reading →</a>
+              </div>
+            </article>
+            
+            <article class="article-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="article-image">
+                <img src="img/background-candles1.jpg" alt="Article thumbnail">
+              </div>
+              <div class="article-content">
+                <h3><a href="#">Embodied Presence in Daily Life</a></h3>
+                <p class="article-meta">April 28, 2025 • 6 min read</p>
+                <p>Practical ways to integrate meditation into your everyday activities and relationships.</p>
+                <a href="#" class="read-more">Continue Reading →</a>
+              </div>
+            </article>
+          </div>
+          
+          <div class="text-center">
+            <a href="https://paulbloch.substack.com" class="btn-outline" target="_blank">
+              <i class="fas fa-book-open"></i> Read More on Substack
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="gallery-section">
+        <div class="container">
+          <h2 class="section-title">Moments of Presence</h2>
+          <p class="section-subtitle">Capturing the journey of awakening</p>
+        </div>
+        
+        <div class="masonry-gallery">
+          <div class="gallery-item" data-aos="fade-up">
+            <img src="img/background-ocean3.jpg" alt="Retreat moment">
+            <div class="gallery-caption">Silent retreat in California</div>
+          </div>
+          <div class="gallery-item tall" data-aos="fade-up" data-aos-delay="100">
+            <img src="img/background-moon1.jpg" alt="Teaching moment">
+            <div class="gallery-caption">Teaching at Omega Institute</div>
+          </div>
+          <div class="gallery-item wide" data-aos="fade-up" data-aos-delay="200">
+            <img src="img/background-prism1.jpg" alt="Group meditation">
+            <div class="gallery-caption">Group meditation circle</div>
+          </div>
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+            <img src="img/background-water1.jpg" alt="Nature meditation">
+            <div class="gallery-caption">Morning practice in nature</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Merch Section -->
+      <section class="merch-section">
+        <div class="container">
+          <h2 class="section-title">Practice Essentials</h2>
+          <p class="section-subtitle">Tools to support your journey</p>
+          
+          <div class="merch-grid">
+            <div class="product-card" data-aos="fade-up">
+              <div class="product-image">
+                <img src="img/background-lotus3.jpg" alt="Meditation cushion">
+                <div class="product-badge">Bestseller</div>
+              </div>
+              <div class="product-info">
+                <h3>Zafu Meditation Cushion</h3>
+                <p class="price">$89.00</p>
+                <button class="btn-outline">Add to Cart</button>
+              </div>
+            </div>
+            
+            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="product-image">
+                <img src="img/background-singingbowl1.jpg" alt="Singing bowl">
+              </div>
+              <div class="product-info">
+                <h3>Tibetan Singing Bowl</h3>
+                <p class="price">$65.00</p>
+                <button class="btn-outline">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Carousel Section -->
+      <section class="carousel-section">
+        <div class="container">
+          <h2 class="section-title">Upcoming Retreats</h2>
+          <p class="section-subtitle">Immersive experiences for deepening practice</p>
+        </div>
+        
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <div class="carousel-card" data-aos="fade-up">
+              <img src="img/background-astronaut.jpg" alt="Mountain retreat">
+              <div class="card-content">
+                <h3>Mountain Silence Retreat</h3>
+                <p class="date">June 10-20, 2025</p>
+                <p>A 10-day immersion in the Colorado Rockies</p>
+                <a href="#" class="btn-outline">Details</a>
+              </div>
+            </div>
+            
+            <div class="carousel-card" data-aos="fade-up" data-aos-delay="100">
+              <img src="img/backgound-crystalball1.jpg" alt="Coastal retreat">
+              <div class="card-content">
+                <h3>Ocean Presence Retreat</h3>
+                <p class="date">August 5-9, 2025</p>
+                <p>Meditation and movement by the California coast</p>
+                <a href="#" class="btn-outline">Details</a>
+              </div>
+            </div>
+            
+            <div class="carousel-card" data-aos="fade-up" data-aos-delay="200">
+              <img src="img/background-eye2.jpg" alt="Desert retreat">
+              <div class="card-content">
+                <h3>Desert Awakening Intensive</h3>
+                <p class="date">October 15-22, 2025</p>
+                <p>Arizona desert immersion for advanced practitioners</p>
+                <a href="#" class="btn-outline">Details</a>
+              </div>
+            </div>
+
+            <div class="carousel-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="img/background-eye2.jpg" alt="Desert retreat">
+                <div class="card-content">
+                  <h3>Desert Awakening Intensive</h3>
+                  <p class="date">October 15-22, 2025</p>
+                  <p>Arizona desert immersion for advanced practitioners</p>
+                  <a href="#" class="btn-outline">Details</a>
+                </div>
+              </div>
+
+              <div class="carousel-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="img/background-eye2.jpg" alt="Desert retreat">
+                <div class="card-content">
+                  <h3>Desert Awakening Intensive</h3>
+                  <p class="date">October 15-22, 2025</p>
+                  <p>Arizona desert immersion for advanced practitioners</p>
+                  <a href="#" class="btn-outline">Details</a>
+                </div>
+              </div>
+
+              <div class="carousel-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="img/background-eye2.jpg" alt="Desert retreat">
+                <div class="card-content">
+                  <h3>Desert Awakening Intensive</h3>
+                  <p class="date">October 15-22, 2025</p>
+                  <p>Arizona desert immersion for advanced practitioners</p>
+                  <a href="#" class="btn-outline">Details</a>
+                </div>
+              </div>
+
+              <div class="carousel-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="img/background-eye2.jpg" alt="Desert retreat">
+                <div class="card-content">
+                  <h3>Desert Awakening Intensive</h3>
+                  <p class="date">October 15-22, 2025</p>
+                  <p>Arizona desert immersion for advanced practitioners</p>
+                  <a href="#" class="btn-outline">Details</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        
+        <div class="carousel-nav">
+          <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <!-- Scroll Reveal Section -->
+      <section class="scroll-reveal-section">
+        <div class="container">
+          <h2 class="section-title" data-aos="fade-up">The Path of Awakening</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Three pillars of spiritual practice</p>
+          
+          <div class="pillars-container">
+            <div class="pillar" data-aos="fade-up" data-aos-delay="200">
+              <div class="pillar-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h3>Seeing Clearly</h3>
+              <p>Recognizing the nature of reality beyond concepts and beliefs.</p>
+            </div>
+            
+            <div class="pillar" data-aos="fade-up" data-aos-delay="300">
+              <div class="pillar-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3>Loving Completely</h3>
+              <p>Embracing all experience with unconditional acceptance.</p>
+            </div>
+            
+            <div class="pillar" data-aos="fade-up" data-aos-delay="400">
+              <div class="pillar-icon">
+                <i class="fas fa-hands"></i>
+              </div>
+              <h3>Living Fully</h3>
+              <p>Expressing realization through compassionate action.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<script>
+    // Initialize AOS (Animate On Scroll) library
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+    
+      // Carousel functionality
+      const track = document.querySelector('.carousel-track');
+      const cards = document.querySelectorAll('.carousel-card');
+      const prevBtn = document.querySelector('.carousel-prev');
+      const nextBtn = document.querySelector('.carousel-next');
+      let currentPosition = 0;
+      const cardWidth = cards[0].offsetWidth + 32; // include gap
+    
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          currentPosition -= cardWidth;
+          if (currentPosition < - (cards.length - 3) * cardWidth) {
+            currentPosition = 0;
+          }
+          track.style.transform = `translateX(${currentPosition}px)`;
+        });
+      }
+    
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          currentPosition += cardWidth;
+          if (currentPosition > 0) {
+            currentPosition = - (cards.length - 3) * cardWidth;
+          }
+          track.style.transform = `translateX(${currentPosition}px)`;
+        });
+      }
+    
+      // Audio player functionality
+      const playButtons = document.querySelectorAll('.play-button, .play-pause');
+      playButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const audioPlayer = this.closest('.episode-card')?.querySelector('audio');
+          const playPause = this.closest('.audio-player')?.querySelector('.play-pause');
+          
+          if (audioPlayer && !audioPlayer.paused) {
+            audioPlayer.pause();
+            if (playPause) playPause.innerHTML = '<i class="fas fa-play"></i>';
+            if (this.classList.contains('play-button')) {
+              this.innerHTML = '<i class="fas fa-play"></i>';
+            }
+          } else if (audioPlayer) {
+            audioPlayer.play();
+            if (playPause) playPause.innerHTML = '<i class="fas fa-pause"></i>';
+            if (this.classList.contains('play-button')) {
+              this.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+          }
+        });
+      });
+    
+      // Update progress bars for audio players
+      document.querySelectorAll('audio').forEach(audio => {
+        const audioPlayer = audio.closest('.audio-player');
+        if (audioPlayer) {
+          const progressBar = audioPlayer.querySelector('.progress');
+          const timeDisplay = audioPlayer.querySelector('.time');
+          
+          audio.addEventListener('timeupdate', function() {
+            const percent = (audio.currentTime / audio.duration) * 100;
+            if (progressBar) progressBar.style.width = percent + '%';
+            
+            // Update time display
+            const minutes = Math.floor(audio.currentTime / 60);
+            const seconds = Math.floor(audio.currentTime % 60);
+            if (timeDisplay) timeDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+          });
+        }
+      });
+    });
+</script>
+
+</body>
+</html>
+

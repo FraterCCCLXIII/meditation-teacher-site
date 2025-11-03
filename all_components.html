@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Bloch | Nondual Meditation Teacher</title>
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" as="script">
+    
+    <!-- Load AOS CSS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJL531V88W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QJL531V88W');
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: Black;
+            --accent-color: #D69828;
+            --light-color: #f9f7f5;
+            --dark-color: #272727;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter Tight', sans-serif;
+            color: var(--primary-color);
+            line-height: 1.6;
+            background-color: var(--light-color);
+            letter-spacing: .5px;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Special Gothic Expanded One', sans-serif;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            letter-spacing: .5px;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 8.5rem);
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 6vw, 4rem);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 4vw, 1.8rem);
+            line-height: 1.3;
+        }
+
+        h4 {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            line-height: 1.3;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            font-size: clamp(1rem, 2vw, 1.1rem);
+        }
+        
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--dark-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            margin: 1rem 0;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(249, 247, 245, 0.95);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Inter Tight', serif;
+            font-size: clamp(16px, 4vw, 20px);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: clamp(1rem, 3vw, 2rem);
+        }
+        
+        .nav-links a {
+            color: var(--primary-color);
+            font-size: clamp(12px, 3vw, 14px);
+            font-weight: 400;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .mobile-menu {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.25);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+        }
+        
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .about-text, .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            height: 500px;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Teaching Section */
+        .teachings-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .teaching-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .teaching-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .teaching-card i {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        /* Events Section */
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .event-card {
+            background-color: white;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            position: relative;
+            transition: var(--transition);
+            min-height: 400px;
+        }
+        
+        .event-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+        
+        .event-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            color: white;
+        }
+        
+        /* Carousel Section */
+        .carousel-section {
+            padding: 4rem 0;
+            background-color: var(--light-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+            will-change: transform;
+        }
+        
+        .carousel-card {
+            min-width: 300px;
+            margin-right: 2rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+        
+        .carousel-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+            background: white;
+        }
+        
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        
+        .modal-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: var(--light-color);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .about-image, .mentorship-image {
+                height: 350px;
+            }
+            
+            .hero-content {
+                margin-top: 20%;
+            }
+            
+            .carousel-card {
+                min-width: 85%;
+                margin-right: 1rem;
+            }
+        }
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #D69828;
+            --light-color: #f9f7f5;
+            --dark-color: #272727;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: white;
+            background-color: var(--light-color);
+        }
+        
+        .accordion-section {
+            padding: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .accordion-container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .accordion-card {
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: var(--transition);
+        }
+        
+        .accordion-card:first-child {
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .accordion-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            transition: var(--transition);
+        }
+        
+        .accordion-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(44, 62, 80, 0.8);
+            z-index: 2;
+            transition: var(--transition);
+        }
+        
+        .accordion-content {
+            position: relative;
+            z-index: 3;
+            padding: 30px;
+            height: 200px; /* Initial height */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: var(--transition);
+        }
+        
+        .accordion-header {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+        
+        .accordion-text {
+            max-height: 60px; /* Show first few lines */
+            overflow: hidden;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        /* .accordion-text:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: linear-gradient(to bottom, rgba(44, 62, 80, 0), rgba(44, 62, 80, 1));
+            transition: var(--transition);
+        } */
+        
+        /* Expanded state */
+        .accordion-card.expanded {
+            flex-grow: 1;
+        }
+        
+        .accordion-card.expanded .accordion-content {
+            height: 400px; /* Expanded height */
+            justify-content: center;
+        }
+        
+        .accordion-card.expanded .accordion-overlay {
+            background-color: rgba(44, 62, 80, 0.9);
+        }
+        
+        .accordion-card.expanded .accordion-text {
+            max-height: 300px;
+        }
+        
+        .accordion-card.expanded .accordion-text:after {
+            opacity: 0;
+        }
+        
+        /* Mobile behavior */
+        @media (max-width: 768px) {
+            .accordion-card {
+                cursor: pointer;
+            }
+            
+            /* Disable hover effects on mobile */
+            .accordion-card:not(.expanded):hover .accordion-content {
+                height: 200px;
+            }
+            
+            .accordion-content {
+                height: 150px; /* Smaller initial height on mobile */
+            }
+            
+            .accordion-card.expanded .accordion-content {
+                height: auto; /* Flexible height on mobile */
+                min-height: 300px;
+            }
+        }
+        
+        /* Desktop hover behavior */
+        @media (min-width: 769px) {
+            .accordion-card:hover .accordion-content {
+                height: 400px;
+                justify-content: center;
+            }
+            
+            .accordion-card:hover .accordion-overlay {
+                background-color: rgba(44, 62, 80, 0.9);
+            }
+            
+            .accordion-card:hover .accordion-text {
+                max-height: 300px;
+            }
+            
+            .accordion-card:hover .accordion-text:after {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <div class="logo"><i class="fa-solid fa-rainbow" style="margin-right: 10px;"></i>Paul Stuart Bloch</div>
+            <ul class="nav-links">
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#mentorship">Mentorship</a></li>
+                <li><a href="#offerings">Work With Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="img/background-cosmos1.jpg" alt="Meditation on the beach" loading="lazy">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 data-aos="fade-up">Put liberation first.</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Explore spirituality, meditation, and transformative philosophy with Paul Bloch.</p>
+            <a href="#about" class="btn" data-aos="fade-up" data-aos-delay="200">Learn more</a>
+        </div>
+    </section>
+
+    <section class="accordion-section">
+        <div class="accordion-container">
+            <!-- Card 1 -->
+            <div class="accordion-card">
+                <div class="accordion-bg" style="background-image: url('img/backgound-crystalball1.jpg');"></div>
+                <div class="accordion-overlay"></div>
+                <div class="accordion-content">
+                    <h3 class="accordion-header">Meditation Techniques</h3>
+                    <div class="accordion-text">
+                        <p>Discover powerful meditation techniques to calm your mind and find inner peace. Our guided sessions help you develop focus and mindfulness in your daily practice. Whether you're a beginner or experienced practitioner, these methods will deepen your awareness. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="accordion-card">
+                <div class="accordion-bg" style="background-image: url('img/backgound-crystalball1.jpg');"></div>
+                <div class="accordion-overlay"></div>
+                <div class="accordion-content">
+                    <h3 class="accordion-header">Yoga Practices</h3>
+                    <div class="accordion-text">
+                        <p>Explore ancient yoga practices that unite body, mind and spirit. Our classes blend traditional postures with modern understanding of anatomy and movement. Suitable for all levels, these sessions will improve your flexibility and inner balance. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="accordion-card">
+                <div class="accordion-bg" style="background-image: url('img/backgound-crystalball1.jpg');"></div>
+                <div class="accordion-overlay"></div>
+                <div class="accordion-content">
+                    <h3 class="accordion-header">Mindfulness Training</h3>
+                    <div class="accordion-text">
+                        <p>Develop present-moment awareness through our mindfulness training programs. Learn practical techniques to reduce stress and enhance your daily life experience. These evidence-based methods are backed by scientific research. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile click functionality
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            const cards = document.querySelectorAll('.accordion-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Close all other cards
+                    cards.forEach(otherCard => {
+                        if (otherCard !== this) {
+                            otherCard.classList.remove('expanded');
+                        }
+                    });
+                    
+                    // Toggle this card
+                    this.classList.toggle('expanded');
+                });
+            });
+        }
+        
+        // Preload images for better performance
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.accordion-bg');
+            images.forEach(img => {
+                const src = img.style.backgroundImage.replace('url("', '').replace('")', '');
+                const image = new Image();
+                image.src = src;
+            });
+        });
+    </script>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Finding my Way</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>As a dedicated meditation teacher with over two decades of experience, I guide students through the transformative journey of nondual awareness and spiritual awakening.</p>
+                    <a href="#contact" class="btn">Book a Session</a>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="img/paul5.jpg" alt="Paul Bloch" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Upcoming Events</h2>
+                <p>Join me for transformative experiences online and in-person</p>
+            </div>
+            <div class="events-container">
+                <div class="event-card" data-aos="fade-up">
+                    <img src="img/background-aya.jpg" alt="Weekend Retreat" loading="lazy">
+                    <div class="event-overlay">
+                        <div class="event-date">May 15-17, 2025</div>
+                        <h3>Weekend Retreat: The Art of Presence</h3>
+                        <a href="#" class="btn">Register</a>
+                    </div>
+                </div>
+                <!-- More event cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Upcoming Retreats</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Immersive experiences for deepening practice</p>
+            
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-card">
+                        <img src="img/background-astronaut.jpg" alt="Mountain retreat" loading="lazy">
+                        <div class="card-content">
+                            <h3>Mountain Silence Retreat</h3>
+                            <p class="date">June 10-20, 2025</p>
+                            <a href="#" class="btn-outline">Details</a>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="img/background-astronaut.jpg" alt="Mountain retreat" loading="lazy">
+                        <div class="card-content">
+                            <h3>Mountain Silence Retreat</h3>
+                            <p class="date">June 10-20, 2025</p>
+                            <a href="#" class="btn-outline">Details</a>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="img/background-astronaut.jpg" alt="Mountain retreat" loading="lazy">
+                        <div class="card-content">
+                            <h3>Mountain Silence Retreat</h3>
+                            <p class="date">June 10-20, 2025</p>
+                            <a href="#" class="btn-outline">Details</a>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="img/background-astronaut.jpg" alt="Mountain retreat" loading="lazy">
+                        <div class="card-content">
+                            <h3>Mountain Silence Retreat</h3>
+                            <p class="date">June 10-20, 2025</p>
+                            <a href="#" class="btn-outline">Details</a>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="img/background-astronaut.jpg" alt="Mountain retreat" loading="lazy">
+                        <div class="card-content">
+                            <h3>Mountain Silence Retreat</h3>
+                            <p class="date">June 10-20, 2025</p>
+                            <a href="#" class="btn-outline">Details</a>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="img/background-astronaut.jpg" alt="Mountain retreat" loading="lazy">
+                        <div class="card-content">
+                            <h3>Mountain Silence Retreat</h3>
+                            <p class="date">June 10-20, 2025</p>
+                            <a href="#" class="btn-outline">Details</a>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="img/background-astronaut.jpg" alt="Mountain retreat" loading="lazy">
+                        <div class="card-content">
+                            <h3>Mountain Silence Retreat</h3>
+                            <p class="date">June 10-20, 2025</p>
+                            <a href="#" class="btn-outline">Details</a>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="img/background-astronaut.jpg" alt="Mountain retreat" loading="lazy">
+                        <div class="card-content">
+                            <h3>Mountain Silence Retreat</h3>
+                            <p class="date">June 10-20, 2025</p>
+                            <a href="#" class="btn-outline">Details</a>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="img/background-astronaut.jpg" alt="Mountain retreat" loading="lazy">
+                        <div class="card-content">
+                            <h3>Mountain Silence Retreat</h3>
+                            <p class="date">June 10-20, 2025</p>
+                            <a href="#" class="btn-outline">Details</a>
+                        </div>
+                    </div>
+                    <!-- More carousel cards -->
+                </div>
+            </div>
+            
+            <div class="carousel-nav">
+                <button class="carousel-prev" id="carouselPrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-next" id="carouselNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">Paul Bloch</div>
+            <p>Meditation Teacher | Author | Creative Nondual Guide</p>
+            
+            <ul class="footer-links">
+                <li><a href="https://instagram.com/paulbloch"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://youtube.com/paulstuartbloch"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://x.com/paulstuartbloch"><i class="fab fa-x-twitter"></i></a></li>
+            </ul>
+            
+            <p>&copy; 2025 Paul Bloch. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Mobile navigation toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - document.querySelector('header').offsetHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Carousel functionality
+        const track = document.getElementById('carouselTrack');
+        const cards = document.querySelectorAll('.carousel-card');
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+        let currentPosition = 0;
+        const cardWidth = cards[0].offsetWidth + 32; // include gap
+
+        function updateCarousel() {
+            track.style.transform = `translateX(${currentPosition}px)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentPosition -= cardWidth;
+            if (currentPosition < - (cards.length - 1) * cardWidth) {
+                currentPosition = 0;
+            }
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentPosition += cardWidth;
+            if (currentPosition > 0) {
+                currentPosition = - (cards.length - 1) * cardWidth;
+            }
+            updateCarousel();
+        });
+
+        // Make carousel responsive
+        window.addEventListener('resize', () => {
+            cardWidth = cards[0].offsetWidth + 32;
+            updateCarousel();
+        });
+
+        // Lazy load images
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>
