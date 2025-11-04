@@ -1,0 +1,1230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Bloch | Nondual Meditation Teacher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJL531V88W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QJL531V88W');
+</script>
+ 
+  <!-- Main CSS File -->
+  <link href="styles.css" rel="stylesheet">
+  
+</head>
+<body>
+  <!-- Subscription Modal -->
+  <div id="subscription-modal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-image">
+        <img src="img/background-water1.jpg" alt="Subscribe to Paul's newsletter">
+      </div>
+      <div class="modal-content">
+        <h2>Join My Newsletter</h2>
+        <p>Get the latest insights on spirituality, meditation, and nondual teachings delivered directly to your inbox.</p>
+        <div class="subscription-form">
+          <iframe src="https://paulbloch.substack.com/embed" width="100%" height="150" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <a href="https://paulbloch.substack.com/" target="_blank" class="btn-outline">Visit My Substack</a>
+        <div>
+          <a class="dismiss-link" id="dismiss-modal">No thanks, maybe later</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation Modal -->
+<div id="confirmation-modal" class="modal-overlay">
+    <div class="modal-container">
+        <div class="modal-image">
+            <img src="img/paul8.jpg" alt="Message sent confirmation">
+        </div>
+        <div class="modal-content">
+            <h2>Message Sent!</h2>
+            <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+            <button class="btn-outline" id="dismiss-confirmation">Close</button>
+        </div>
+    </div>
+</div>
+
+  <!-- Optional: Floating Subscribe Button -->
+  <div class="subscribe-button">
+    <a href="#" class="btn-outline" id="show-modal-btn">Subscribe to Newsletter</a>
+  </div>
+
+  <script>
+    // Get the modal elements
+    const modal = document.getElementById('subscription-modal');
+    const dismissBtn = document.getElementById('dismiss-modal');
+    const showModalBtn = document.getElementById('show-modal-btn');
+    
+    // Function to show the modal
+    function showModal() {
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    }
+    
+    // Function to hide the modal
+    function hideModal() {
+      modal.classList.remove('show');
+      document.body.style.overflow = ''; // Re-enable scrolling
+      
+      // Set a cookie to remember that the user has seen the modal
+      document.cookie = "subscriptionModalShown=true; max-age=86400"; // 24 hours
+    }
+    
+    // Check if the modal has been shown before
+    function hasModalBeenShown() {
+      return document.cookie.split(';').some(item => item.trim().startsWith('subscriptionModalShown='));
+    }
+    
+    // Event listeners
+    dismissBtn.addEventListener('click', hideModal);
+    showModalBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      showModal();
+    });
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        hideModal();
+      }
+    });
+    
+    // Show the modal after 3 seconds if it hasn't been shown before
+    window.addEventListener('load', function() {
+      if (!hasModalBeenShown()) {
+        setTimeout(showModal, 3000);
+      }
+    });
+  </script>
+
+    </style>
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <div class="logo gilda-display-regular" style="display: flex; align-items: center; gap: 0.75rem;">
+                <svg id="nav-logo-mark" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.46 46.46" style="width: 24px; height: 24px; display: block; flex-shrink: 0;">
+                    <defs>
+                        <style>.nav-logo-cls { fill: #231f20; }</style>
+                    </defs>
+                    <path class="nav-logo-cls" d="M46.46,46.46H0V0h46.46v46.46ZM1,45.46h44.46V1H1v44.46Z"/>
+                    <path class="nav-logo-cls" d="M23.23,43.31c-8.84,0-17.69-.48-18.65-1.44-1.92-1.92-1.92-35.38,0-37.29,1.92-1.92,35.38-1.92,37.29,0,1.92,1.92,1.92,35.38,0,37.29-.96.96-9.8,1.44-18.65,1.44ZM23.23,4.13c-8.51,0-17.02.39-17.94,1.17-1.54,1.84-1.54,34.03,0,35.88,1.84,1.54,34.03,1.55,35.88,0,1.54-1.84,1.54-33.99,0-35.88-.94-.77-9.44-1.16-17.94-1.16Z"/>
+                    <path class="nav-logo-cls" d="M23.23,40.19c-5.54,0-12.18-.72-14.21-2.75s-2.75-8.67-2.75-14.21.72-12.19,2.75-14.21c3.72-3.72,24.7-3.72,28.42,0,2.03,2.03,2.75,8.67,2.75,14.21s-.72,12.18-2.75,14.21-8.67,2.75-14.21,2.75ZM23.23,7.26c-5.93,0-11.86.82-13.5,2.46-1.47,1.47-2.46,6.9-2.46,13.5s.99,12.04,2.46,13.5,6.9,2.46,13.5,2.46,12.04-.99,13.5-2.46,2.46-6.9,2.46-13.5-.99-12.04-2.46-13.5c-1.64-1.64-7.57-2.46-13.5-2.46Z"/>
+                    <path class="nav-logo-cls" d="M23.23,37.05c-3.54,0-7.08-1.35-9.78-4.04-5.39-5.39-5.39-14.16,0-19.55,5.39-5.39,14.16-5.39,19.55,0s5.39,14.16,0,19.55h0c-2.7,2.7-6.24,4.04-9.78,4.04ZM23.23,10.41c-3.28,0-6.57,1.25-9.07,3.75-5,5-5,13.14,0,18.14,5,5,13.14,5,18.14,0,5-5,5-13.14,0-18.14-2.5-2.5-5.79-3.75-9.07-3.75Z"/>
+                </svg>
+                <span>Presence</span>
+                <!-- <p>Artist, Inventor, Philosopher, Futurist, DJ, Hatmaker, Nondual Kinda Guy</p> -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#practice">Practice</a></li>
+                <li><a href="#mentorship">Mentorship</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="img/background-meditation3.jpg" alt="Meditation on the beach" style="width: 100%; height: 100%; object-fit: cover; position: absolute;">
+        <div class="hero-overlay"></div>
+        <div class="container" style="position: relative; z-index: 2; padding-top: 10%;">
+            <div style="text-align: left;">
+                <h1 style="font-size: 5rem;">Awaken to the power of presence</h1>
+            <p>Explore meditation and transformative nondual teachings with Paul Bloch</p>
+            <a href="#about" class="btn">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+<section id="introduction" class="intro-section" style="padding-top: 8rem; padding-bottom: 4rem; background-color: #f9f7f5;">
+    <div class="container">
+        <div class="intro-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2>
+                Finding The Way
+            </h2>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 2rem;">
+                Discover a meditation practice that is effortless. Rooted in the timeless wisdom of the great traditions, this practice reveals the profound secret hidden in plain sight: when you stop trying to change what is, reality opens in effortless perfection.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="#about" class="btn">My Story</a>
+                <a href="#practice" class="btn-outline">Practice</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Events Section -->
+       <section id="events" class="events" style="padding: 6rem 0; background-color: white;">
+        <div class="container">
+            <div class="section-header" style="text-align: left;">
+                <h2>Upcoming Events</h2>
+                <p>Join me for transformative experiences online and in-person</p>
+            </div>
+            <div class="events-container" id="events-container">
+                <div id="events-loading" style="display: flex; justify-content: center; align-items: center; padding: 4rem 0;">
+                    <div class="spinner" style="width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #000; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- About Section -->
+        <section id="about" class="about" style="padding: 6rem 0; background-color: #f9f7f5;">
+            <div class="container">
+                <div class="section-header" style="text-align: left;">
+                    <h2>Meet Your Guide</h2>
+                </div>
+                <div class="about-content" style="align-items: flex-start;">
+                    <div class="about-text">
+                        <p>As a dedicated meditation teacher with over two decades of experience, I guide students through the transformative journey of nondual awareness and spiritual awakening.</p>
+                        
+                        <p>My path has been shaped by training in Tibetan traditions, ordination as a Zen monk, and extensive studies in California and Japan. My approach integrates independent studies of nondual traditions across Eurasia, with an emphasis on Stoic and Neoplatonic philosophy, as well as Eastern Tantric traditions like Kashmir Shaivism.</p>
+                        
+                        <p>For over 20 years, I studied with the renowned nondual teacher Andrew Cohen (student of Papaji and Ramana Maharishi), supporting his organization Manifest Nirvana during his final years and spending formative time in Tiruvanamalai, India with him, his wife Alka Arora, and main pupil Daniela Bomatter.</p>
+                        
+                        <p>As the co-founder of the ICON conference (Integral Conference of North America), I've created spaces for integral theorists and metamodernists to gather and exchange ideas biannually.</p>
+                        
+                        <p>My teaching emphasizes the integration of ancient wisdom with contemporary understanding, positioning nondual awareness not as an esoteric concept but as the natural birthright of every human being.</p>
+                        
+                        <a href="#contact" class="btn">Book a Session</a>
+                    </div>
+                    <div class="about-image" style="align-self: flex-start;">
+                        <img src="img/paul6.jpg" alt="Paul Bloch">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Practice Section - Four Two-Column Sections -->
+    <section id="practice" style="padding: 0;">
+        <section class="two-column image-left">
+            <div class="image-container">
+              <img src="img/background-meditation2.jpg" alt="Meditation practice">
+            </div>
+            <div class="text-container" style="background-color: white;">
+              <div class="text-content">
+                <h2>Discover the Practice of Real Meditation</h2>
+                <p>Believe it or not, meditation is not about becoming calm or even more spiritual. It's about waking up to the simplicity of this moment — where nothing is missing, and everything belongs as it is.</p>
+                <p>The true art of meditation is learning to have nothing, know nothing, and be no one.</p>
+                <p>When you stop searching for meaning and start resting as awareness itself, a quiet joy begins to rise from within. No effort. No goal. No problem. Just the gentle yet profound presence of what IS—the experience of our Original Nature, our Source.</p>
+                <p>Through guided practice, dialogue, and embodied inquiry, you'll learn to rest in awareness — not as a technique, but as a way of living.</p>
+                </div>
+                </div>
+    </section>
+
+          <section class="two-column image-right">
+            <div class="text-container" style="background-color: white;">
+              <div class="text-content">
+                <h2>Find Your Way</h2>
+                <p>Meditation isn't a performance; it's a return to your natural state.</p>
+                <p>If you've ever felt:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                  <li>Like some meditation methods were too rigid or gimmicky</li>
+                  <li>Overwhelmed by stress or the need for constant self-improvement</li>
+                  <li>Drawn to presence but unsure where to begin</li>
+                </ul>
+                <p>Then you're ready to find your way home — through authentic meditation practice.</p>
+                </div>
+            </div>
+            <div class="image-container">
+              <img src="img/background-moon2.jpg" alt="Finding your way">
+        </div>
+    </section>
+
+        <section class="two-column image-left">
+            <div class="image-container">
+              <img src="img/background-eye6.jpg" alt="Discovering the self">
+            </div>
+            <div class="text-container" style="background-color: white;">
+              <div class="text-content">
+                <h2>Discover the Self</h2>
+                <p>Who are you when you stop trying to be someone? In meditation, we turn attention inward not to find answers, but to fall into the mystery of being. Here, the "self" that strives, judges, and fears begins to dissolve. What remains is boundless awareness — alive, luminous, free.</p>
+              </div>
+        </div>
+    </section>
+
+          <section class="two-column image-right">
+            <div class="text-container" style="background-color: white;">
+              <div class="text-content">
+                <h2>A Timeless Practice</h2>
+                <p>You don't need to live in a monastery or renounce the world.</p>
+                <p>Meditation is for people who live fully — who love, create, lead, and serve.</p>
+                <p>Drawing from the great traditions, this practice bridges the ancient and the modern. It invites awakening not as retreat, but as participation — discovering our true selves as part of an evolving universe. Whether you sit for five minutes or dive into a silent retreat, the invitation is the same:</p>
+                <p><strong>Be still. Realize. Live.</strong></p>
+            </div>
+                </div>
+            <div class="image-container">
+              <img src="img/background-water1.jpg" alt="Timeless practice">
+        </div>
+          </section>
+    </section>
+
+
+    <!-- Mentorship Section -->
+    <section id="mentorship" class="mentorship" style="padding: 6rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Practice Mentorship</h2>
+                <h3>Personal guidance for your spiritual journey</h3>
+            </div>
+            
+            <div class="mentorship-content">
+                <div class="mentorship-text">
+                    <p>In Sanskrit, there's a beautiful word — <em>Kalyanamitra</em> — which means "spiritual friend." This describes the relationship I cultivate with mentees: not an authority figure elevated on a pedestal, but a compassionate companion walking alongside you on the path.</p>
+                    
+                    <p>One-on-one mentorship provides personalized guidance for practitioners who are ready to graduate from occasional meditation sessions and commit to deepening their practice. Together, we navigate both the heights of spiritual insight and the practical challenges of integrating awareness into everyday life.</p>
+                    
+                    <div class="emphasis-box">
+                        <h3>My Approach to Student-Teacher Dynamics</h3>
+                        <p>The traditional guru-disciple model can be problematic in contemporary contexts. My approach emphasizes mutual respect, appropriate boundaries, and the recognition that awakening is your birthright, not something bestowed by a teacher.</p>
+                        
+                        <p>I view the teacher-student relationship as a context for recognizing our shared nature, not as a hierarchy of spiritual attainment. While I offer guidance based on experience, the ultimate authority in your journey is your own direct understanding.</p>
+                    </div>
+                    
+                    <p>Sessions take place via video call or in person when possible, typically meeting bi-weekly or monthly depending on your needs and schedule.</p>
+                    
+                    <a href="#contact" class="btn">Apply for Mentorship</a>
+                </div>
+                <div class="mentorship-image"><img src="img/background-lotus2.jpg"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <!--
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experiences</h2>
+            </div>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Paul's teachings have transformed my understanding of meditation. His ability to bridge Eastern and Western philosophical traditions while maintaining practical relevance is truly remarkable."</p>
+                    <p class="testimonial-author">— SJ</p>
+                </div>
+              </div>
+            </div>
+          </section>
+    -->
+
+<!-- Contact Section -->
+<section id="contact" class="contact" style="padding: 6rem 0; background-color: white;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Connect With Me</h2>
+            <p>For inquiries about private sessions, speaking engagements, or retreat participation</p>
+        </div>
+        <div class="contact-form" style="text-align: center;">
+            <a href="mailto:findpresence@gmail.com" class="btn" style="display: inline-block;">Send Email</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo gilda-display-regular" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+                <svg id="footer-logo-mark" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.46 46.46" style="width: 24px; height: 24px;">
+                    <defs>
+                        <style>.footer-logo-cls { fill: #ffffff; }</style>
+                    </defs>
+                    <path class="footer-logo-cls" d="M46.46,46.46H0V0h46.46v46.46ZM1,45.46h44.46V1H1v44.46Z"/>
+                    <path class="footer-logo-cls" d="M23.23,43.31c-8.84,0-17.69-.48-18.65-1.44-1.92-1.92-1.92-35.38,0-37.29,1.92-1.92,35.38-1.92,37.29,0,1.92,1.92,1.92,35.38,0,37.29-.96.96-9.8,1.44-18.65,1.44ZM23.23,4.13c-8.51,0-17.02.39-17.94,1.17-1.54,1.84-1.54,34.03,0,35.88,1.84,1.54,34.03,1.55,35.88,0,1.54-1.84,1.54-33.99,0-35.88-.94-.77-9.44-1.16-17.94-1.16Z"/>
+                    <path class="footer-logo-cls" d="M23.23,40.19c-5.54,0-12.18-.72-14.21-2.75s-2.75-8.67-2.75-14.21.72-12.19,2.75-14.21c3.72-3.72,24.7-3.72,28.42,0,2.03,2.03,2.75,8.67,2.75,14.21s-.72,12.18-2.75,14.21-8.67,2.75-14.21,2.75ZM23.23,7.26c-5.93,0-11.86.82-13.5,2.46-1.47,1.47-2.46,6.9-2.46,13.5s.99,12.04,2.46,13.5,6.9,2.46,13.5,2.46,12.04-.99,13.5-2.46,2.46-6.9,2.46-13.5-.99-12.04-2.46-13.5c-1.64-1.64-7.57-2.46-13.5-2.46Z"/>
+                    <path class="footer-logo-cls" d="M23.23,37.05c-3.54,0-7.08-1.35-9.78-4.04-5.39-5.39-5.39-14.16,0-19.55,5.39-5.39,14.16-5.39,19.55,0s5.39,14.16,0,19.55h0c-2.7,2.7-6.24,4.04-9.78,4.04ZM23.23,10.41c-3.28,0-6.57,1.25-9.07,3.75-5,5-5,13.14,0,18.14,5,5,13.14,5,18.14,0,5-5,5-13.14,0-18.14-2.5-2.5-5.79-3.75-9.07-3.75Z"/>
+                </svg>
+                <span>Presence</span>
+            </div>
+            
+            <ul class="footer-links" style="display: none;">
+                <li><a href="https://substack.com/paulbloch"><i class="fa-solid fa-rainbow"></i></i></a></li>
+                <li><a href="https://instagram.com/paulbloch"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://youtube.com/paulstuartbloch"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://open.spotify.com/user/1241195035?si=62908d7d33c44651"><i class="fab fa-spotify"></i></a></li>
+                <li><a href="https://x.com/paulstuartbloch"><i class="fab fa-x-twitter"></i></a></li>
+            </ul>
+            
+            <p>&copy; 2025 Paul Bloch. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Google Analytics Event Tracking for all buttons
+        function trackButtonClick(button, action, label) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    'event_category': 'Button Click',
+                    'event_label': label || (button.textContent || button.innerText || 'Unknown Button'),
+                    'value': 1
+                });
+            }
+        }
+        
+        // Track all buttons on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track all buttons with .btn and .btn-outline classes
+            document.querySelectorAll('.btn, .btn-outline, button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const buttonText = this.textContent || this.innerText || 'Unknown Button';
+                    const buttonId = this.id || '';
+                    const buttonHref = this.href || '';
+                    
+                    let label = buttonText.trim();
+                    if (buttonId) label += ' (' + buttonId + ')';
+                    if (buttonHref && buttonHref.includes('mailto:')) label = 'Send Email';
+                    if (buttonHref && buttonHref.includes('#')) label = 'Navigate to ' + buttonHref;
+                    
+                    trackButtonClick(this, 'click', label);
+                });
+            });
+            
+            // Track navigation links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    const linkText = this.textContent || this.innerText || 'Unknown Link';
+                    trackButtonClick(this, 'navigation_click', 'Nav: ' + linkText.trim());
+                });
+            });
+            
+            // Track external links
+            document.querySelectorAll('a[href^="http"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    const linkText = this.textContent || this.innerText || this.href;
+                    trackButtonClick(this, 'external_link_click', linkText.trim());
+                });
+            });
+            
+            // Use event delegation for dynamically created buttons
+            document.addEventListener('click', function(e) {
+                const target = e.target.closest('.btn, .btn-outline, button, .add-to-calendar-btn, #view-more-events-btn');
+                if (target) {
+                    const buttonText = target.textContent || target.innerText || 'Unknown Button';
+                    trackButtonClick(target, 'click', buttonText.trim());
+                }
+            }, true);
+        });
+        
+        // Mobile Navigation Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when a nav link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active')) {
+                // Check if click is outside the nav menu and mobile menu button
+                if (!navLinks.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                }
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(249, 247, 245, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.backgroundColor = 'rgba(249, 247, 245, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+
+    <script>
+      // Contact form handling
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('form-status');
+const confirmationModal = document.getElementById('confirmation-modal');
+const dismissConfirmation = document.getElementById('dismiss-confirmation');
+
+// Function to show confirmation modal
+function showConfirmation() {
+    confirmationModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+// Function to hide confirmation modal
+function hideConfirmation() {
+    confirmationModal.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+// Event listener for confirmation modal dismiss button
+if (dismissConfirmation) {
+    dismissConfirmation.addEventListener('click', hideConfirmation);
+}
+
+// Close modal when clicking outside
+if (confirmationModal) {
+    confirmationModal.addEventListener('click', function(e) {
+        if (e.target === confirmationModal) {
+            hideConfirmation();
+        }
+    });
+}
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        
+        // Show loading state
+        formStatus.innerHTML = '<p>Message Sent!</p>';
+        
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Show confirmation modal instead of inline message
+                showConfirmation();
+                contactForm.reset();
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        })
+        .catch(error => {
+            formStatus.innerHTML = '<p style="color:red;">There was a problem sending your message. Please try again later.</p>';
+        });
+    });
+}
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    
+      // Carousel functionality
+      const track = document.querySelector('.carousel-track');
+      const cards = document.querySelectorAll('.carousel-card');
+      const prevBtn = document.querySelector('.carousel-prev');
+      const nextBtn = document.querySelector('.carousel-next');
+      
+      // Only initialize carousel if elements exist
+      if (track && cards.length > 0 && prevBtn && nextBtn) {
+      let currentPosition = 0;
+      const cardWidth = cards[0].offsetWidth + 32; // include gap
+    
+      nextBtn.addEventListener('click', () => {
+        currentPosition -= cardWidth;
+        if (currentPosition < - (cards.length - 3) * cardWidth) {
+          currentPosition = 0;
+        }
+        track.style.transform = `translateX(${currentPosition}px)`;
+      });
+    
+      prevBtn.addEventListener('click', () => {
+        currentPosition += cardWidth;
+        if (currentPosition > 0) {
+          currentPosition = - (cards.length - 3) * cardWidth;
+        }
+        track.style.transform = `translateX(${currentPosition}px)`;
+      });
+      } // End carousel initialization
+    
+      // Audio player functionality
+      const playButtons = document.querySelectorAll('.play-button, .play-pause');
+      playButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const audioPlayer = this.closest('.episode-card').querySelector('audio');
+          const playPause = this.closest('.audio-player')?.querySelector('.play-pause');
+          
+          if (audioPlayer.paused) {
+            audioPlayer.play();
+            if (playPause) playPause.innerHTML = '<i class="fas fa-pause"></i>';
+            if (this.classList.contains('play-button')) {
+              this.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+          } else {
+            audioPlayer.pause();
+            if (playPause) playPause.innerHTML = '<i class="fas fa-play"></i>';
+            if (this.classList.contains('play-button')) {
+              this.innerHTML = '<i class="fas fa-play"></i>';
+            }
+          }
+        });
+      });
+    
+      // Update progress bars for audio players
+      document.querySelectorAll('audio').forEach(audio => {
+        const progressBar = audio.closest('.audio-player').querySelector('.progress');
+        const timeDisplay = audio.closest('.audio-player').querySelector('.time');
+        
+        audio.addEventListener('timeupdate', function() {
+          const percent = (audio.currentTime / audio.duration) * 100;
+          progressBar.style.width = percent + '%';
+          
+          // Update time display
+          const minutes = Math.floor(audio.currentTime / 60);
+          const seconds = Math.floor(audio.currentTime % 60);
+          timeDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        });
+      });
+    });
+
+    // Load events dynamically from Google Sheet
+    document.addEventListener('DOMContentLoaded', function() {
+      const eventsContainer = document.getElementById('events-container');
+      if (!eventsContainer) return;
+
+      const sheetId = '1UEF4ifZwx2k6KrcfjWHQhjlds5tGmixcOPZZYTOYyeM';
+      // Use CORS proxy to access Google Sheets CSV export (direct access has CORS issues)
+      const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=0`;
+
+      // Array of background images to cycle through
+      const backgroundImages = [
+        'img/background-meditation3.jpg',
+        'img/background-lotus.jpg',
+        'img/background-incense2.jpg',
+        'img/background-candles1.jpg',
+        'img/background-moon1.jpg',
+        'img/background-ocean4.jpg',
+        'img/background-prism1.jpg',
+        'img/background-sparkle1.jpg'
+      ];
+
+
+      // Helper function to parse CSV (handles both comma and tab-separated)
+      function parseSheetCSV(text) {
+        const lines = text.split('\n').map(line => line.trim()).filter(line => line);
+        if (lines.length === 0) {
+          console.log('No lines found in CSV');
+          return [];
+        }
+        
+        // Detect delimiter - check if first line has tabs (Google Sheets CSV export uses commas)
+        const firstLine = lines[0];
+        const hasTabs = firstLine.includes('\t');
+        const delimiter = hasTabs ? '\t' : ',';
+        
+        console.log('Using delimiter:', delimiter === '\t' ? 'TAB' : 'COMMA');
+        console.log('First line:', firstLine.substring(0, 200));
+        
+        // Parse headers
+        const headers = parseDelimitedLine(lines[0], delimiter);
+        console.log('Headers found:', headers);
+        const rows = [];
+
+        for (let i = 1; i < lines.length; i++) {
+          const values = parseDelimitedLine(lines[i], delimiter);
+          if (values.length === 0 || values.every(v => !v.trim())) continue;
+          
+          const row = {};
+          headers.forEach((header, index) => {
+            const headerKey = header.trim();
+            const value = values[index] ? values[index].trim() : '';
+            row[headerKey] = value;
+          });
+          
+          // Debug first row
+          if (i === 1) {
+            console.log('First data row:', row);
+          }
+          
+          // Only add rows that have a Date (check various possible date column names)
+          const dateValue = row.Date || row.date || row['Date '] || row['date '];
+          if (dateValue && dateValue.trim()) {
+            rows.push(row);
+          }
+        }
+        
+        console.log('Total rows parsed:', rows.length);
+        return rows;
+      }
+
+      // Helper to parse delimited line handling quoted fields
+      function parseDelimitedLine(line, delimiter) {
+        const result = [];
+        let current = '';
+        let inQuotes = false;
+        
+        for (let i = 0; i < line.length; i++) {
+          const char = line[i];
+          
+          if (char === '"') {
+            inQuotes = !inQuotes;
+          } else if (char === delimiter && !inQuotes) {
+            result.push(current);
+            current = '';
+          } else {
+            current += char;
+          }
+        }
+        result.push(current);
+        return result;
+      }
+
+      // Helper function to format date
+      function formatDate(dateString) {
+        if (!dateString || !dateString.trim()) return null;
+        
+        try {
+          // Try parsing as MM/DD/YYYY first (Google Sheets format)
+          const parts = dateString.trim().split('/');
+          if (parts.length === 3) {
+            const month = parseInt(parts[0], 10);
+            const day = parseInt(parts[1], 10);
+            const year = parseInt(parts[2], 10);
+            if (!isNaN(month) && !isNaN(day) && !isNaN(year)) {
+              return new Date(year, month - 1, day);
+            }
+          }
+          
+          // Fallback to standard Date parsing
+          const date = new Date(dateString);
+          if (!isNaN(date.getTime())) {
+            return date;
+          }
+          
+          return null;
+        } catch (e) {
+          console.error('Error parsing date:', dateString, e);
+          return null;
+        }
+      }
+
+      // Helper function to get day of the week
+      function getDayOfWeek(date) {
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        return days[date.getDay()];
+      }
+
+      // Helper function to format date string
+      function formatDateString(date) {
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                      'July', 'August', 'September', 'October', 'November', 'December'];
+        const dayOfWeek = getDayOfWeek(date);
+        return `${dayOfWeek} • ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+      }
+
+      // Helper function to check if date is today
+      function isToday(date) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const eventDate = new Date(date);
+        eventDate.setHours(0, 0, 0, 0);
+        return eventDate.getTime() === today.getTime();
+      }
+
+      // Helper function to get timezone offset for PT (Pacific Time)
+      // PT is UTC-8 (PST) or UTC-7 (PDT), we'll use PST for simplicity
+      // For calendar compatibility, we'll use UTC format with TZID
+      function getTimezoneOffset(timezone) {
+        // Map common timezone abbreviations
+        const tzMap = {
+          'PT': -8,        // Pacific Time (PST)
+          'PST': -8,
+          'PDT': -7,
+          'ET': -5,        // Eastern Time (EST)
+          'EST': -5,
+          'EDT': -4,
+          'CT': -6,        // Central Time (CST)
+          'CST': -6,
+          'CDT': -5,
+          'MT': -7,        // Mountain Time (MST)
+          'MST': -7,
+          'MDT': -6
+        };
+        
+        if (!timezone) return -8; // Default to PT
+        
+        const tzUpper = timezone.toUpperCase().trim();
+        // Check if it's just "PT" or contains timezone info
+        if (tzMap[tzUpper]) {
+          return tzMap[tzUpper];
+        }
+        
+        // Try to extract UTC offset from strings like "PT UTC -8"
+        const offsetMatch = timezone.match(/UTC\s*([+-]?\d+)/i);
+        if (offsetMatch) {
+          return parseInt(offsetMatch[1], 10);
+        }
+        
+        return -8; // Default to PT (PST)
+      }
+
+      // Helper function to format date for ICS with timezone (YYYYMMDDTHHmmssZ for UTC or TZID)
+      function formatICSDate(date, timeString, timezone) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        
+        // Parse time if provided (format: "5:00 PM")
+        let hours = 0;
+        let minutes = 0;
+        if (timeString) {
+          const timeMatch = timeString.match(/(\d+):(\d+)\s*(AM|PM)/i);
+          if (timeMatch) {
+            hours = parseInt(timeMatch[1], 10);
+            const mins = parseInt(timeMatch[2], 10);
+            const ampm = timeMatch[3].toUpperCase();
+            
+            if (ampm === 'PM' && hours !== 12) hours += 12;
+            if (ampm === 'AM' && hours === 12) hours = 0;
+            minutes = mins;
+          }
+        }
+        
+        // Convert to UTC based on timezone offset
+        const tzOffset = getTimezoneOffset(timezone);
+        const utcHours = hours - tzOffset;
+        let adjustedDate = new Date(Date.UTC(year, date.getMonth(), day, utcHours, minutes, 0));
+        
+        // Format as UTC
+        const utcYear = adjustedDate.getUTCFullYear();
+        const utcMonth = String(adjustedDate.getUTCMonth() + 1).padStart(2, '0');
+        const utcDay = String(adjustedDate.getUTCDate()).padStart(2, '0');
+        const utcHoursStr = String(adjustedDate.getUTCHours()).padStart(2, '0');
+        const utcMinutesStr = String(adjustedDate.getUTCMinutes()).padStart(2, '0');
+        
+        return `${utcYear}${utcMonth}${utcDay}T${utcHoursStr}${utcMinutesStr}00Z`;
+      }
+
+      // Function to generate ICS file content
+      function generateICS(event) {
+        const dateValue = event.Date || event.date || event['Date '] || event['date '];
+        const date = formatDate(dateValue);
+        if (!date) return null;
+        
+        const timeValue = event.Time || event.time || event['Time '] || event['time '];
+        const timezoneValue = event.TimeZone || event.timezone || event['TimeZone '] || event['timezone '] || 'PT';
+        const titleValue = event.Title || event.title || event['Title '] || event['title '] || 'Meditation Circle';
+        const contentValue = event.Content || event.content || event['Content '] || event['content '] || '';
+        const locationValue = event.Location || event.location || event['Location '] || event['location '] || 'Online';
+        const meetingLink = event.MeetingLink || event.meetinglink || event['MeetingLink '] || event['meetinglink '] || '';
+        const donationLink = event.DonationLink || event.donationlink || event['DonationLink '] || event['donationlink '] || '';
+        
+        // Create start date/time (1 hour duration)
+        const startDate = formatICSDate(date, timeValue, timezoneValue);
+        
+        // Calculate end date (1 hour later)
+        const endDate = new Date(date);
+        if (timeValue) {
+          const timeMatch = timeValue.match(/(\d+):(\d+)\s*(AM|PM)/i);
+          if (timeMatch) {
+            let hours = parseInt(timeMatch[1], 10);
+            const minutes = parseInt(timeMatch[2], 10);
+            const ampm = timeMatch[3].toUpperCase();
+            if (ampm === 'PM' && hours !== 12) hours += 12;
+            if (ampm === 'AM' && hours === 12) hours = 0;
+            endDate.setHours(hours + 1, minutes, 0);
+          }
+        } else {
+          // If no time, default to 1 hour from start
+          endDate.setHours(endDate.getHours() + 1);
+        }
+        const endDateStr = formatICSDate(endDate, timeValue, timezoneValue);
+        
+        // Escape special characters for ICS format
+        // Note: In ICS, newlines should be \n (single backslash n), not \\n
+        function escapeICS(text) {
+          if (!text) return '';
+          // First, normalize all line endings to \n
+          let normalized = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+          
+          // Then escape special characters
+          normalized = normalized.replace(/\\/g, '\\\\')
+                                 .replace(/;/g, '\\;')
+                                 .replace(/,/g, '\\,');
+          
+          // For ICS format, newlines should be literal \n (not escaped)
+          // But we need to be careful - some calendar apps expect \\n
+          // Let's use \n which is standard for ICS
+          normalized = normalized.replace(/\n/g, '\\n');
+          
+          return normalized;
+        }
+        
+        // Build comprehensive description with all event details
+        // Clean up the content first - remove any trailing whitespace/newlines
+        let fullDescription = (contentValue || '').trim();
+        
+        // Remove any trailing periods or punctuation that might interfere
+        fullDescription = fullDescription.replace(/[.\u2014\u2013]\s*$/, '');
+        
+        // Build link section separately to ensure clean formatting
+        const linkParts = [];
+        if (meetingLink) {
+          // Ensure meeting link is clean (no trailing newlines)
+          const cleanMeetingLink = meetingLink.trim();
+          linkParts.push(`Meeting Link: ${cleanMeetingLink}`);
+        }
+        if (donationLink) {
+          // Ensure donation link is clean (no trailing newlines)
+          const cleanDonationLink = donationLink.trim();
+          linkParts.push(`Donation Link: ${cleanDonationLink}`);
+        }
+        
+        // Combine with proper spacing
+        if (linkParts.length > 0) {
+          // Add one blank line before links section (not two)
+          fullDescription += '\n';
+          // Add each link on its own line with space between them
+          fullDescription += linkParts.join('\n');
+        }
+        
+        // Generate unique ID
+        const uid = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}@presence-meditation`;
+        
+        // Build ICS content with all fields
+        const icsContent = [
+          'BEGIN:VCALENDAR',
+          'VERSION:2.0',
+          'PRODID:-//Presence Meditation//Event Calendar//EN',
+          'CALSCALE:GREGORIAN',
+          'METHOD:PUBLISH',
+          'BEGIN:VEVENT',
+          `UID:${uid}`,
+          `DTSTART:${startDate}`,
+          `DTEND:${endDateStr}`,
+          `DTSTAMP:${formatICSDate(new Date(), null, 'PT')}`,
+          `SUMMARY:${escapeICS(titleValue)}`,
+          `DESCRIPTION:${escapeICS(fullDescription)}`,
+          `LOCATION:${escapeICS(locationValue)}`,
+          ...(meetingLink ? [`URL:${meetingLink}`] : []),
+          ...(meetingLink ? [`X-ALT-DESC;FMTTYPE=text/html:${escapeICS(`<p>${escapeICS(contentValue)}</p><p><a href="${meetingLink}">Join Meeting</a></p>${donationLink ? `<p><a href="${donationLink}">Donate</a></p>` : ''}`)}`] : []),
+          'STATUS:CONFIRMED',
+          'SEQUENCE:0',
+          'TRANSP:OPAQUE',
+          'END:VEVENT',
+          'END:VCALENDAR'
+        ].join('\r\n');
+        
+        return icsContent;
+      }
+
+      // Function to download ICS file
+      function downloadICS(event) {
+        const icsContent = generateICS(event);
+        if (!icsContent) {
+          console.error('Could not generate ICS file');
+          return;
+        }
+        
+        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        
+        const dateValue = event.Date || event.date || event['Date '] || event['date '];
+        const date = formatDate(dateValue);
+        const dateStr = date ? formatDateString(date).replace(/,/g, '').replace(/\s+/g, '-') : 'event';
+        const titleValue = (event.Title || event.title || event['Title '] || event['title '] || 'Meditation-Circle').replace(/\s+/g, '-');
+        
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${titleValue}-${dateStr}.ics`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
+
+      // Function to create event list item HTML
+      function createEventCard(event, imageIndex) {
+        // Try multiple field name variations
+        const dateValue = event.Date || event.date || event['Date '] || event['date '];
+        const date = formatDate(dateValue);
+        const dateString = date ? formatDateString(date) : (dateValue || '');
+        const timeValue = event.Time || event.time || event['Time '] || event['time '];
+        const timeString = timeValue ? ` • ${timeValue}` : '';
+        const timeZoneValue = event.TimeZone || event.timezone || event['TimeZone '] || event['timezone '];
+        const timeZoneString = timeZoneValue ? ` ${timeZoneValue}` : '';
+        
+        // Check if event is today
+        const eventIsToday = date ? isToday(date) : false;
+        
+        // Truncate description if too long
+        const contentValue = event.Content || event.content || event['Content '] || event['content '];
+        let description = contentValue || '';
+        if (description.length > 300) {
+          description = description.substring(0, 300) + '...';
+        }
+        
+        const titleValue = event.Title || event.title || event['Title '] || event['title '];
+        const locationValue = event.Location || event.location || event['Location '] || event['location '];
+        const meetingLink = event.MeetingLink || event.meetinglink || event['MeetingLink '] || event['meetinglink '];
+        const donationLink = event.DonationLink || event.donationlink || event['DonationLink '] || event['donationlink '];
+
+        // Store event data in a data attribute for calendar download
+        const eventData = encodeURIComponent(JSON.stringify(event));
+        
+        return `
+          <div class="event-item" style="padding: 2rem 0; border-bottom: 1px solid #e5e5e5;">
+            <div class="event-date" style="font-size: 0.9rem; color: #666; margin-bottom: 0.5rem;">${dateString}${timeString}${timeZoneString}</div>
+            <h3 style="margin: 0 0 1rem 0; font-size: 1.5rem;">${titleValue || 'Meditation Circle'}</h3>
+            <p style="margin: 0 0 1rem 0; line-height: 1.6; color: #333;">${description}</p>
+            <p style="margin: 0 0 1rem 0;"><strong>Location:</strong> ${locationValue || 'Online'}</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              ${meetingLink && eventIsToday ? `<a href="${meetingLink}" class="btn" target="_blank">Join Meeting</a>` : ''}
+              ${donationLink ? `<a href="${donationLink}" class="btn-outline" target="_blank">Donate</a>` : ''}
+              ${!eventIsToday ? `<button class="btn-outline add-to-calendar-btn" data-event='${eventData}' style="cursor: pointer;">Add To Calendar</button>` : ''}
+            </div>
+          </div>
+        `;
+      }
+
+      // Make downloadICS available globally
+      window.downloadEventICS = function(eventDataString) {
+        try {
+          const event = JSON.parse(decodeURIComponent(eventDataString));
+          downloadICS(event);
+        } catch (e) {
+          console.error('Error parsing event data:', e);
+        }
+      };
+      
+      // Set up event listeners for Add to Calendar buttons after events are displayed
+      function setupCalendarButtons() {
+        document.querySelectorAll('.add-to-calendar-btn').forEach(button => {
+          button.addEventListener('click', function() {
+            const eventData = this.getAttribute('data-event');
+            if (eventData) {
+              // Track calendar download
+              if (typeof gtag !== 'undefined') {
+                try {
+                  const event = JSON.parse(decodeURIComponent(eventData));
+                  const eventTitle = event.Title || event.title || event['Title '] || event['title '] || 'Event';
+                  gtag('event', 'add_to_calendar', {
+                    'event_category': 'Button Click',
+                    'event_label': 'Add To Calendar: ' + eventTitle,
+                    'value': 1
+                  });
+                } catch(e) {
+                  gtag('event', 'add_to_calendar', {
+                    'event_category': 'Button Click',
+                    'event_label': 'Add To Calendar',
+                    'value': 1
+                  });
+                }
+              }
+              window.downloadEventICS(eventData);
+            }
+          });
+        });
+      }
+
+      // Fetch and display events using CORS proxy
+      function loadEvents() {
+        // Use CORS proxy to fetch CSV
+        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(csvUrl)}`)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Failed to fetch CSV');
+            }
+            return response.json();
+          })
+          .then(data => {
+            if (data && data.contents) {
+              let csvContent = data.contents;
+              
+              // Check if contents is a data URI (base64 encoded)
+              if (csvContent.startsWith('data:text/csv;base64,')) {
+                // Extract and decode base64 content
+                const base64Data = csvContent.split(',')[1];
+                csvContent = atob(base64Data);
+                console.log('Decoded base64 CSV data:', csvContent.substring(0, 500));
+              } else {
+                console.log('Raw CSV data:', csvContent.substring(0, 500));
+              }
+              
+              const events = parseSheetCSV(csvContent);
+              console.log('Parsed events:', events); // Debug: show parsed events
+              if (events && events.length > 0) {
+                displayEvents(events);
+              } else {
+                console.error('No events parsed from CSV. CSV content length:', csvContent.length);
+                throw new Error('No events found in sheet');
+              }
+            } else {
+              throw new Error('No data in CSV response');
+            }
+          })
+          .catch(error => {
+            console.error('Error loading events:', error);
+            console.error('Error details:', error.message, error.stack);
+            // Hide loading spinner
+            const loadingSpinner = document.getElementById('events-loading');
+            if (loadingSpinner) {
+              loadingSpinner.style.display = 'none';
+            }
+            eventsContainer.innerHTML = `<p style="text-align: center; padding: 2rem; color: #999;">Unable to load events at this time. Please check back later.<br><small style="font-size: 0.8rem;">Error: ${error.message}</small></p>`;
+          });
+      }
+
+      function displayEvents(events) {
+        // Hide loading spinner
+        const loadingSpinner = document.getElementById('events-loading');
+        if (loadingSpinner) {
+          loadingSpinner.style.display = 'none';
+        }
+        
+        console.log('Displaying events, count:', events.length);
+        console.log('Sample event:', events[0]);
+          
+        // Filter out past events (compare dates without time - exclude events before today)
+        const now = new Date();
+        now.setHours(0, 0, 0, 0);
+        const upcomingEvents = events.filter(event => {
+          // Try multiple date field name variations
+          const dateValue = event.Date || event.date || event['Date '] || event['date '];
+          const eventDate = formatDate(dateValue);
+          if (!eventDate) {
+            console.log('Event missing date:', event);
+            return false;
+          }
+          const eventDateOnly = new Date(eventDate);
+          eventDateOnly.setHours(0, 0, 0, 0);
+          // Only include events that are today or in the future (not past)
+          return eventDateOnly >= now;
+        });
+
+        console.log('Upcoming events after filtering:', upcomingEvents.length);
+
+        // Sort events by date
+        upcomingEvents.sort((a, b) => {
+          const dateA = formatDate(a.Date || a.date || a['Date '] || a['date ']);
+          const dateB = formatDate(b.Date || b.date || b['Date '] || b['date ']);
+          if (!dateA || !dateB) return 0;
+          return dateA - dateB;
+        });
+
+        // Generate HTML for events with pagination (show 3 at a time)
+        if (upcomingEvents.length === 0) {
+          eventsContainer.innerHTML = '<p style="text-align: center; padding: 2rem;">No upcoming events scheduled. Check back soon!</p>';
+        } else {
+          eventsContainer.style.display = 'block';
+          // Store all events for pagination
+          window.allEvents = upcomingEvents;
+          window.displayedEventsCount = 0;
+          displayNextEvents(3);
+        }
+      }
+
+      // Function to display next N events
+      function displayNextEvents(count) {
+        const eventsContainer = document.getElementById('events-container');
+        if (!eventsContainer || !window.allEvents) return;
+
+        const startIndex = window.displayedEventsCount || 0;
+        const endIndex = Math.min(startIndex + count, window.allEvents.length);
+        const eventsToShow = window.allEvents.slice(startIndex, endIndex);
+
+        if (startIndex === 0) {
+          // First load - clear container and show first batch
+          eventsContainer.innerHTML = '';
+        }
+
+        // Add events to container
+        eventsToShow.forEach((event, index) => {
+          const eventHTML = createEventCard(event, startIndex + index);
+          eventsContainer.insertAdjacentHTML('beforeend', eventHTML);
+        });
+
+        // Set up event listeners for calendar buttons
+        setupCalendarButtons();
+
+        // Update displayed count
+        window.displayedEventsCount = endIndex;
+
+        // Add or update "View More" button
+        const existingButton = document.getElementById('view-more-events-btn');
+        if (existingButton) {
+          existingButton.remove();
+        }
+
+        if (window.displayedEventsCount < window.allEvents.length) {
+          const viewMoreBtn = document.createElement('button');
+          viewMoreBtn.id = 'view-more-events-btn';
+          viewMoreBtn.className = 'btn-outline';
+          viewMoreBtn.textContent = `View More (${window.allEvents.length - window.displayedEventsCount} remaining)`;
+          viewMoreBtn.style.cssText = 'margin: 2rem auto; display: block; cursor: pointer;';
+          viewMoreBtn.addEventListener('click', () => {
+            // Track View More button click
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'click', {
+                'event_category': 'Button Click',
+                'event_label': 'View More Events',
+                'value': 1
+              });
+            }
+            displayNextEvents(3);
+          });
+          eventsContainer.appendChild(viewMoreBtn);
+        }
+      }
+
+      // Load events on page load
+      loadEvents();
+    });
+    </script>
+
+</body>
+</html>

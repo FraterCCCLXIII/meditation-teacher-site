@@ -1,0 +1,637 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Bloch | Nondual Meditation Teacher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJL531V88W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QJL531V88W');
+</script>
+ 
+  <!-- Main CSS File -->
+  <link href="styles.css" rel="stylesheet">
+  
+</head>
+<body>
+  <!-- Subscription Modal -->
+  <div id="subscription-modal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-image">
+        <img src="img/paul9.jpg" alt="Subscribe to Paul's newsletter">
+      </div>
+      <div class="modal-content">
+        <h2>Join My Newsletter</h2>
+        <p>Get the latest insights on spirituality, meditation, and nondual teachings delivered directly to your inbox.</p>
+        <div class="subscription-form">
+          <iframe src="https://paulbloch.substack.com/embed" width="100%" height="150" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <a href="https://paulbloch.substack.com/" target="_blank" class="btn-outline">Visit My Substack</a>
+        <div>
+          <a class="dismiss-link" id="dismiss-modal">No thanks, maybe later</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation Modal -->
+<div id="confirmation-modal" class="modal-overlay">
+    <div class="modal-container">
+        <div class="modal-image">
+            <img src="img/paul9.jpg" alt="Message sent confirmation">
+        </div>
+        <div class="modal-content">
+            <h2>Message Sent!</h2>
+            <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+            <button class="btn-outline" id="dismiss-confirmation">Close</button>
+        </div>
+    </div>
+</div>
+
+  <!-- Optional: Floating Subscribe Button -->
+  <div class="subscribe-button">
+    <a href="#" class="btn-outline" id="show-modal-btn">Subscribe to Newsletter</a>
+  </div>
+
+  <script>
+    // Get the modal elements
+    const modal = document.getElementById('subscription-modal');
+    const dismissBtn = document.getElementById('dismiss-modal');
+    const showModalBtn = document.getElementById('show-modal-btn');
+    
+    // Function to show the modal
+    function showModal() {
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    }
+    
+    // Function to hide the modal
+    function hideModal() {
+      modal.classList.remove('show');
+      document.body.style.overflow = ''; // Re-enable scrolling
+      
+      // Set a cookie to remember that the user has seen the modal
+      document.cookie = "subscriptionModalShown=true; max-age=86400"; // 24 hours
+    }
+    
+    // Check if the modal has been shown before
+    function hasModalBeenShown() {
+      return document.cookie.split(';').some(item => item.trim().startsWith('subscriptionModalShown='));
+    }
+    
+    // Event listeners
+    dismissBtn.addEventListener('click', hideModal);
+    showModalBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      showModal();
+    });
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        hideModal();
+      }
+    });
+    
+    // Show the modal after 3 seconds if it hasn't been shown before
+    window.addEventListener('load', function() {
+      if (!hasModalBeenShown()) {
+        setTimeout(showModal, 3000);
+      }
+    });
+  </script>
+
+    </style>
+
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <div class="logo"><i class="fa-solid fa-rainbow" style="margin-right: 10px;"></i></i>Paul Stuart Bloch
+                <!-- <p>Artist, Inventor, Philosopher, Futurist, DJ, Hatmaker, Nondual Kinda Guy</p> -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <!-- <li><a href="#art">Art</a></li> -->
+                <!-- <li><a href="#meditation">Meditation</a></li> -->
+                <li><a href="#mentorship">Mentorship</a></li>
+                <li><a href="#offerings">Work With Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="img/background-cosmos1.jpg" alt="Meditation on the beach" style="width: 100%; height: 100%; object-fit: cover; position: absolute;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" style="margin-top: 10%;">
+            <h1>Put liberation first.</h1>
+            <p>Explore spirituality, meditation, and transformative philosophy with Paul Bloch.</p>
+            <a href="#about" class="btn">Learn more</a>
+        </div>
+    </section>
+
+
+    <section class="two-column image-left">
+      <div class="image-container">
+        <img src="img/paul5.jpg" alt="Paul Bloch teaching">
+      </div>
+      <div class="text-container">
+        <div class="text-content">
+          <h2>Discover Nondual Awareness</h2>
+          <p>Experience the seamless unity of awareness beyond concepts of self and other. My approach makes profound realization accessible through direct experience rather than complex philosophy.</p>
+          <a href="#contact" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="two-column image-right">
+      <div class="text-container">
+        <div class="text-content">
+          <h2>20 Years of Spiritual Guidance</h2>
+          <p>Trained in Tibetan traditions and ordained as a Zen monk, I've spent decades guiding students through the transformative journey of awakening. My teaching integrates ancient wisdom with contemporary understanding.</p>
+          <a href="#about" class="btn">My Story</a>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="img/paul6.jpg" alt="Paul Bloch meditation">
+      </div>
+    </section>
+
+            <!-- About Section -->
+            <section id="about" class="about" style="padding: 6rem 0;">
+              <div class="container">
+                  <div class="section-header" style="text-align: left;">
+                      <h2>Finding my Way</h2>
+                  </div>
+                  <div class="about-content">
+                      <div class="about-text">
+                          <p>As a dedicated meditation teacher with over two decades of experience, I guide students through the transformative journey of nondual awareness and spiritual awakening.</p>
+                          
+                          <p>My path has been shaped by training in Tibetan traditions, ordination as a Zen monk, and extensive studies in California and Japan. My approach integrates independent studies of nondual traditions across Eurasia, with an emphasis on Stoic and Neoplatonic philosophy, as well as Eastern Tantric traditions like Kashmir Shaivism.</p>
+                          
+                          <p>For over 20 years, I studied with the renowned nondual teacher Andrew Cohen (student of Papaji and Ramana Maharishi), supporting his organization Manifest Nirvana during his final years and spending formative time in Tiruvanamalai, India with him, his wife Alka Arora, and main pupil Daniela Bomatter.</p>
+                          
+                          <p>As the co-founder of the ICON conference (Integral Conference of North America), I've created spaces for integral theorists and metamodernists to gather and exchange ideas biannually.</p>
+                          
+                          <p>My teaching emphasizes the integration of ancient wisdom with contemporary understanding, positioning nondual awareness not as an esoteric concept but as the natural birthright of every human being.</p>
+                          
+                          <a href="#contact" class="btn">Book a Session</a>
+                      </div>
+                      <div class="about-image">
+                          <img src="img/paul5.jpg" alt="Paul Bloch">
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+    <!-- Introduction Section -->
+<section id="introduction" class="intro-section" style="padding-top: 8rem; padding-bottom: 4rem; background-color: #f9f7f5;">
+    <div class="container">
+        <div class="intro-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2>
+                Finding The Way
+            </h2>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 2rem;">
+                I'm Paul Bloch - an artist and guide to embodied awakening and discovering your authentic expression. For over 20 years, I've been looking for the God who is already present beneath the stories of who we think we are. My approach connects ancient wisdom and religion with a contemporary understanding of life, consciousness, and the universe we live in. I believe heaven on earth is possible—but it will take our wholes selves to co-create it with God. My goal is to clarify The Way, to help make a spiritual realization accessible, and give confidence and support along the path. Real transformation often contradicts what we think we know about how to change. I'm here as a guide to point out the part of yourself that is always free—and always will be free.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="#about" class="btn">My Story</a>
+                <a href="#philosophy" class="btn-outline">Core Teachings</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <style>
+        /* Substack Section Styles (Basic layout - the widget itself has limited external styling) */
+        .substack-section {
+            background-color: var(--light-color);
+            padding: 5rem 0;
+        }
+
+        .substack-feed-widget .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    color: black;
+}
+
+        .substack-articles-container { /* This is likely no longer needed with the official widget */
+            list-style: none;
+            padding: 0;
+        }
+
+        /* You might be able to add some basic container styling if needed */
+        #substack-feed-embed {
+            /* Example: Adjust margins or alignment if needed */
+            margin-bottom: 2rem;
+        }
+
+        /* The rest of your existing CSS should apply to the section header and the "Read More" button */
+
+        /* Responsive adjustments for Substack section */
+        @media (max-width: 768px) {
+            .substack-section {
+                padding: 4rem 0;
+            }
+        }
+    </style>
+
+    
+
+    <script>
+      window.SubstackFeedWidget = {
+        substackUrl: "paulbloch.substack.com",
+        posts: 3, // Adjust as needed
+        colors: {
+          primary: "var(--primary-color)", // #000000
+          secondary: "var(--accent-color)", // #000000
+          background: "var(--light-color)", // #000000
+        }
+      };
+    </script>
+    <script src="https://substackapi.com/embeds/feed.js" async></script>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="img/background-hand.jpg" alt="Meditation on the beach" style="width: 100%; height: 100%; object-fit: cover; position: absolute;">
+        <div class="hero-content">
+            <h1 style="font-size: 4.5rem;">You can experience liberation without being perfect first.</h1>
+        </div>
+    </section>
+
+    <!-- Teachings Section -->
+    <section id="philosophy" class="teachings" style="padding: 6rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Teachings</h2>
+                <p>Exploring the landscape of consciousness through direct experience</p>
+            </div>
+            <div class="teachings-container">
+                <div class="teaching-card">
+                    <i class="fas fa-om"></i>
+                    <h3>Nondual Meditation</h3>
+                    <p>Experience the seamless unity of awareness and phenomena through meditation practices that dissolve the illusion of separation between self and other, subject and object.</p>
+                </div>
+                <div class="teaching-card">
+                    <i class="fas fa-mountain"></i>
+                    <h3>Direct Path Awakening</h3>
+                    <p>Engage with practical methods for recognizing your true nature directly, without unnecessary conceptual elaboration or prolonged preparatory practices.</p>
+                </div>
+                <div class="teaching-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Heart-Centered Presence</h3>
+                    <p>Cultivate a profound openness of heart that embraces all experiences with compassionate acceptance while maintaining clear discernment.</p>
+                </div>
+                <div class="teaching-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Evolutionary Spirituality</h3>
+                    <p>Discover how awakening consciousness can participate consciously in the evolutionary process, integrating being and becoming in a dynamic relationship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Books Section -->
+    <!-- <section id="books" class="books">
+        <div class="container">
+            <div class="section-header">
+                <h2>Published Works</h2>
+                <p>Explorations of consciousness through the written word</p>
+            </div>
+            <div class="books-container">
+                <div class="book-card">
+                    <div class="book-image"></div>
+                    <h3>The Paradox of Being</h3>
+                    <p>An exploration of nondual awareness through the lens of both Eastern and Western contemplative traditions.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-image"></div>
+                    <h3>Meditation Beyond Method</h3>
+                    <p>A practical guide to transcending technique and discovering the natural state of awareness.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-image"></div>
+                    <h3>The Integral Vision</h3>
+                    <p>A comprehensive framework for understanding the evolution of consciousness in individuals and collectives.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+          <section class="scroll-reveal-section">
+            <div class="container">
+              <h2 class="section-title" data-aos="fade-up">The Path of Awakening</h2>
+              <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Three pillars of spiritual practice</p>
+              
+              <div class="pillars-container">
+                <div class="pillar" data-aos="fade-up" data-aos-delay="200">
+                  <div class="pillar-icon">
+                    <i class="fas fa-eye"></i>
+                  </div>
+                  <h3>Seeing Clearly</h3>
+                  <p>Recognizing the nature of reality beyond concepts and beliefs.</p>
+                </div>
+                
+                <div class="pillar" data-aos="fade-up" data-aos-delay="300">
+                  <div class="pillar-icon">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <h3>Loving Completely</h3>
+                  <p>Embracing all experience with unconditional acceptance.</p>
+                </div>
+                
+                <div class="pillar" data-aos="fade-up" data-aos-delay="400">
+                  <div class="pillar-icon">
+                    <i class="fas fa-hands"></i>
+                  </div>
+                  <h3>Living Fully</h3>
+                  <p>Expressing realization through compassionate action.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section id="substack" class="substack-section">
+            <div class="container">
+                <div class="section-header" style="text-align: left;">
+                    <h2>Latest Writings</h2>
+                    <p>Insights and reflections on culture, art, nonduality, meditation, and spiritual practice.</p>
+                </div>
+                <div id="substack-feed-embed">
+                    </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://paulbloch.substack.com/" class="btn" target="_blank">Read More on Substack</a>
+                </div>
+            </div>
+        </section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact" style="padding: 6rem 0;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Connect With Me</h2>
+            <p>For inquiries about private sessions, speaking engagements, or retreat participation</p>
+        </div>
+        <div class="contact-form">
+            <form id="contactForm" action="https://formspree.io/f/meogqgly" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+                <div id="form-status" style="margin-top: 1rem;"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">Paul Bloch</div>
+            <p>Meditation Teacher | Author | Creative Nondual Guide</p>
+            
+            <div class="newsletter">
+                <h3>Join My Newsletter</h3>
+                <p>Receive insights, event updates, and meditation guidance</p>
+                <a href="https://paulbloch.substack.com/" class="btn" target="_blank">Subscribe on Substack</a>
+            </div>
+            
+            <ul class="footer-links">
+                <li><a href="https://substack.com/paulbloch"><i class="fa-solid fa-rainbow"></i></i></a></li>
+                <li><a href="https://instagram.com/paulbloch"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://youtube.com/paulstuartbloch"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://open.spotify.com/user/1241195035?si=62908d7d33c44651"><i class="fab fa-spotify"></i></a></li>
+                <li><a href="https://x.com/paulstuartbloch"><i class="fab fa-x-twitter"></i></a></li>
+            </ul>
+            
+            <p>&copy; 2025 Paul Bloch. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when a nav link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(249, 247, 245, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.backgroundColor = 'rgba(249, 247, 245, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+
+    <script>
+      // Contact form handling
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('form-status');
+const confirmationModal = document.getElementById('confirmation-modal');
+const dismissConfirmation = document.getElementById('dismiss-confirmation');
+
+// Function to show confirmation modal
+function showConfirmation() {
+    confirmationModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+// Function to hide confirmation modal
+function hideConfirmation() {
+    confirmationModal.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+// Event listener for confirmation modal dismiss button
+if (dismissConfirmation) {
+    dismissConfirmation.addEventListener('click', hideConfirmation);
+}
+
+// Close modal when clicking outside
+if (confirmationModal) {
+    confirmationModal.addEventListener('click', function(e) {
+        if (e.target === confirmationModal) {
+            hideConfirmation();
+        }
+    });
+}
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        
+        // Show loading state
+        formStatus.innerHTML = '<p>Message Sent!</p>';
+        
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Show confirmation modal instead of inline message
+                showConfirmation();
+                contactForm.reset();
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        })
+        .catch(error => {
+            formStatus.innerHTML = '<p style="color:red;">There was a problem sending your message. Please try again later.</p>';
+        });
+    });
+}
+    </script>
+
+<script>
+    // Initialize AOS (Animate On Scroll) library
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+    
+      // Carousel functionality
+      const track = document.querySelector('.carousel-track');
+      const cards = document.querySelectorAll('.carousel-card');
+      const prevBtn = document.querySelector('.carousel-prev');
+      const nextBtn = document.querySelector('.carousel-next');
+      let currentPosition = 0;
+      const cardWidth = cards[0].offsetWidth + 32; // include gap
+    
+      nextBtn.addEventListener('click', () => {
+        currentPosition -= cardWidth;
+        if (currentPosition < - (cards.length - 3) * cardWidth) {
+          currentPosition = 0;
+        }
+        track.style.transform = `translateX(${currentPosition}px)`;
+      });
+    
+      prevBtn.addEventListener('click', () => {
+        currentPosition += cardWidth;
+        if (currentPosition > 0) {
+          currentPosition = - (cards.length - 3) * cardWidth;
+        }
+        track.style.transform = `translateX(${currentPosition}px)`;
+      });
+    
+      // Audio player functionality
+      const playButtons = document.querySelectorAll('.play-button, .play-pause');
+      playButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const audioPlayer = this.closest('.episode-card').querySelector('audio');
+          const playPause = this.closest('.audio-player')?.querySelector('.play-pause');
+          
+          if (audioPlayer.paused) {
+            audioPlayer.play();
+            if (playPause) playPause.innerHTML = '<i class="fas fa-pause"></i>';
+            if (this.classList.contains('play-button')) {
+              this.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+          } else {
+            audioPlayer.pause();
+            if (playPause) playPause.innerHTML = '<i class="fas fa-play"></i>';
+            if (this.classList.contains('play-button')) {
+              this.innerHTML = '<i class="fas fa-play"></i>';
+            }
+          }
+        });
+      });
+    
+      // Update progress bars for audio players
+      document.querySelectorAll('audio').forEach(audio => {
+        const progressBar = audio.closest('.audio-player').querySelector('.progress');
+        const timeDisplay = audio.closest('.audio-player').querySelector('.time');
+        
+        audio.addEventListener('timeupdate', function() {
+          const percent = (audio.currentTime / audio.duration) * 100;
+          progressBar.style.width = percent + '%';
+          
+          // Update time display
+          const minutes = Math.floor(audio.currentTime / 60);
+          const seconds = Math.floor(audio.currentTime % 60);
+          timeDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        });
+      });
+    });
+    </script>
+
+</body>
+</html>
