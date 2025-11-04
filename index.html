@@ -122,6 +122,53 @@
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
       }
+      
+      /* Hero responsive styles */
+      .hero-title {
+        font-size: 5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5rem !important;
+          line-height: 1.2;
+          margin-bottom: 1rem;
+        }
+        
+        .hero-subtitle {
+          font-size: 1rem !important;
+          margin-bottom: 1.5rem;
+        }
+        
+        .hero-content-mobile {
+          padding-top: 20% !important;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        
+        .hero h1 {
+          font-size: 2.5rem !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .hero-title {
+          font-size: 2rem !important;
+          line-height: 1.15;
+        }
+        
+        .hero-subtitle {
+          font-size: 0.9rem !important;
+        }
+        
+        .hero-content-mobile {
+          padding-top: 25% !important;
+        }
+      }
     </style>
 
 </head>
@@ -159,10 +206,10 @@
     <section id="home" class="hero">
         <img src="img/background-meditation3.jpg" alt="Meditation on the beach" style="width: 100%; height: 100%; object-fit: cover; position: absolute;">
         <div class="hero-overlay"></div>
-        <div class="container" style="position: relative; z-index: 2; padding-top: 10%;">
+        <div class="container hero-content-mobile" style="position: relative; z-index: 2; padding-top: 10%;">
             <div style="text-align: left;">
-                <h1 style="font-size: 5rem;">Awaken to the power of presence</h1>
-            <p>Explore meditation and transformative nondual teachings with Paul Bloch</p>
+                <h1 class="hero-title">Awaken to the power of presence</h1>
+            <p class="hero-subtitle">Explore meditation and transformative nondual teachings with Paul Bloch</p>
             <a href="#about" class="btn">Learn more</a>
             </div>
         </div>
