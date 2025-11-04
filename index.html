@@ -176,7 +176,7 @@
                 Finding The Way
             </h2>
             <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 2rem;">
-                Discover a meditation practice that is effortless. Rooted in the timeless wisdom of the great traditions discover a practice that reveals the profound secret hidden in plain sight: When you stop trying to change what is, reality opens in effortless perfection.
+                Discover a meditation practice that is effortless. Rooted in the timeless wisdom of the great traditions, this practice reveals the profound secret hidden in plain sight: when you stop trying to change what is, reality opens in effortless perfection.
             </p>
             <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
                 <a href="#about" class="btn">My Story</a>
@@ -205,7 +205,7 @@
         <section id="about" class="about" style="padding: 6rem 0; background-color: #f9f7f5;">
             <div class="container">
                 <div class="section-header" style="text-align: left;">
-                    <h2>Finding my Way</h2>
+                    <h2>Meet Your Guide</h2>
                 </div>
                 <div class="about-content" style="align-items: flex-start;">
                     <div class="about-text">
@@ -357,13 +357,17 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="logo gilda-display-regular">Presence</div>
-            <p>Meditation Teacher | Author | Creative Nondual Guide</p>
-            
-            <div class="newsletter">
-                <h3>Join My Newsletter</h3>
-                <p>Receive insights, event updates, and meditation guidance</p>
-                <a href="https://paulbloch.substack.com/" class="btn" target="_blank">Subscribe on Substack</a>
+            <div class="logo gilda-display-regular" style="display: flex; align-items: center; gap: 0.75rem;">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.46 46.46" style="width: 24px; height: 24px;">
+                    <defs>
+                        <style>.cls-1 { fill: #ffffff; }</style>
+                    </defs>
+                    <path class="cls-1" d="M46.46,46.46H0V0h46.46v46.46ZM1,45.46h44.46V1H1v44.46Z"/>
+                    <path class="cls-1" d="M23.23,43.31c-8.84,0-17.69-.48-18.65-1.44-1.92-1.92-1.92-35.38,0-37.29,1.92-1.92,35.38-1.92,37.29,0,1.92,1.92,1.92,35.38,0,37.29-.96.96-9.8,1.44-18.65,1.44ZM23.23,4.13c-8.51,0-17.02.39-17.94,1.17-1.54,1.84-1.54,34.03,0,35.88,1.84,1.54,34.03,1.55,35.88,0,1.54-1.84,1.54-33.99,0-35.88-.94-.77-9.44-1.16-17.94-1.16Z"/>
+                    <path class="cls-1" d="M23.23,40.19c-5.54,0-12.18-.72-14.21-2.75s-2.75-8.67-2.75-14.21.72-12.19,2.75-14.21c3.72-3.72,24.7-3.72,28.42,0,2.03,2.03,2.75,8.67,2.75,14.21s-.72,12.18-2.75,14.21-8.67,2.75-14.21,2.75ZM23.23,7.26c-5.93,0-11.86.82-13.5,2.46-1.47,1.47-2.46,6.9-2.46,13.5s.99,12.04,2.46,13.5,6.9,2.46,13.5,2.46,12.04-.99,13.5-2.46,2.46-6.9,2.46-13.5-.99-12.04-2.46-13.5c-1.64-1.64-7.57-2.46-13.5-2.46Z"/>
+                    <path class="cls-1" d="M23.23,37.05c-3.54,0-7.08-1.35-9.78-4.04-5.39-5.39-5.39-14.16,0-19.55,5.39-5.39,14.16-5.39,19.55,0s5.39,14.16,0,19.55h0c-2.7,2.7-6.24,4.04-9.78,4.04ZM23.23,10.41c-3.28,0-6.57,1.25-9.07,3.75-5,5-5,13.14,0,18.14,5,5,13.14,5,18.14,0,5-5,5-13.14,0-18.14-2.5-2.5-5.79-3.75-9.07-3.75Z"/>
+                </svg>
+                <span>Presence</span>
             </div>
             
             <ul class="footer-links" style="display: none;">
@@ -379,6 +383,61 @@
     </footer>
 
     <script>
+        // Google Analytics Event Tracking for all buttons
+        function trackButtonClick(button, action, label) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    'event_category': 'Button Click',
+                    'event_label': label || (button.textContent || button.innerText || 'Unknown Button'),
+                    'value': 1
+                });
+            }
+        }
+        
+        // Track all buttons on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track all buttons with .btn and .btn-outline classes
+            document.querySelectorAll('.btn, .btn-outline, button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const buttonText = this.textContent || this.innerText || 'Unknown Button';
+                    const buttonId = this.id || '';
+                    const buttonHref = this.href || '';
+                    
+                    let label = buttonText.trim();
+                    if (buttonId) label += ' (' + buttonId + ')';
+                    if (buttonHref && buttonHref.includes('mailto:')) label = 'Send Email';
+                    if (buttonHref && buttonHref.includes('#')) label = 'Navigate to ' + buttonHref;
+                    
+                    trackButtonClick(this, 'click', label);
+                });
+            });
+            
+            // Track navigation links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    const linkText = this.textContent || this.innerText || 'Unknown Link';
+                    trackButtonClick(this, 'navigation_click', 'Nav: ' + linkText.trim());
+                });
+            });
+            
+            // Track external links
+            document.querySelectorAll('a[href^="http"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    const linkText = this.textContent || this.innerText || this.href;
+                    trackButtonClick(this, 'external_link_click', linkText.trim());
+                });
+            });
+            
+            // Use event delegation for dynamically created buttons
+            document.addEventListener('click', function(e) {
+                const target = e.target.closest('.btn, .btn-outline, button, .add-to-calendar-btn, #view-more-events-btn');
+                if (target) {
+                    const buttonText = target.textContent || target.innerText || 'Unknown Button';
+                    trackButtonClick(target, 'click', buttonText.trim());
+                }
+            }, true);
+        });
+        
         // Mobile Navigation Toggle
         const mobileMenu = document.querySelector('.mobile-menu');
         const navLinks = document.querySelector('.nav-links');
@@ -392,6 +451,16 @@
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
             });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active')) {
+                // Check if click is outside the nav menu and mobile menu button
+                if (!navLinks.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                }
+            }
         });
         
         // Smooth scrolling for navigation links
@@ -978,6 +1047,24 @@ if (contactForm) {
           button.addEventListener('click', function() {
             const eventData = this.getAttribute('data-event');
             if (eventData) {
+              // Track calendar download
+              if (typeof gtag !== 'undefined') {
+                try {
+                  const event = JSON.parse(decodeURIComponent(eventData));
+                  const eventTitle = event.Title || event.title || event['Title '] || event['title '] || 'Event';
+                  gtag('event', 'add_to_calendar', {
+                    'event_category': 'Button Click',
+                    'event_label': 'Add To Calendar: ' + eventTitle,
+                    'value': 1
+                  });
+                } catch(e) {
+                  gtag('event', 'add_to_calendar', {
+                    'event_category': 'Button Click',
+                    'event_label': 'Add To Calendar',
+                    'value': 1
+                  });
+                }
+              }
               window.downloadEventICS(eventData);
             }
           });
@@ -1120,6 +1207,14 @@ if (contactForm) {
           viewMoreBtn.textContent = `View More (${window.allEvents.length - window.displayedEventsCount} remaining)`;
           viewMoreBtn.style.cssText = 'margin: 2rem auto; display: block; cursor: pointer;';
           viewMoreBtn.addEventListener('click', () => {
+            // Track View More button click
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'click', {
+                'event_category': 'Button Click',
+                'event_label': 'View More Events',
+                'value': 1
+              });
+            }
             displayNextEvents(3);
           });
           eventsContainer.appendChild(viewMoreBtn);
