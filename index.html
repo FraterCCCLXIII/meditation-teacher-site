@@ -117,23 +117,36 @@
   </script>
 
     </style>
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
 
 </head>
 <body>
     <!-- Header & Navigation -->
     <header>
         <div class="container navbar">
-            <div class="logo gilda-display-regular">Presence
+            <div class="logo gilda-display-regular" style="display: flex; align-items: center; gap: 0.75rem;">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.46 46.46" style="width: 24px; height: 24px;">
+                    <defs>
+                        <style>.cls-1 { fill: #231f20; }</style>
+                    </defs>
+                    <path class="cls-1" d="M46.46,46.46H0V0h46.46v46.46ZM1,45.46h44.46V1H1v44.46Z"/>
+                    <path class="cls-1" d="M23.23,43.31c-8.84,0-17.69-.48-18.65-1.44-1.92-1.92-1.92-35.38,0-37.29,1.92-1.92,35.38-1.92,37.29,0,1.92,1.92,1.92,35.38,0,37.29-.96.96-9.8,1.44-18.65,1.44ZM23.23,4.13c-8.51,0-17.02.39-17.94,1.17-1.54,1.84-1.54,34.03,0,35.88,1.84,1.54,34.03,1.55,35.88,0,1.54-1.84,1.54-33.99,0-35.88-.94-.77-9.44-1.16-17.94-1.16Z"/>
+                    <path class="cls-1" d="M23.23,40.19c-5.54,0-12.18-.72-14.21-2.75s-2.75-8.67-2.75-14.21.72-12.19,2.75-14.21c3.72-3.72,24.7-3.72,28.42,0,2.03,2.03,2.75,8.67,2.75,14.21s-.72,12.18-2.75,14.21-8.67,2.75-14.21,2.75ZM23.23,7.26c-5.93,0-11.86.82-13.5,2.46-1.47,1.47-2.46,6.9-2.46,13.5s.99,12.04,2.46,13.5,6.9,2.46,13.5,2.46,12.04-.99,13.5-2.46,2.46-6.9,2.46-13.5-.99-12.04-2.46-13.5c-1.64-1.64-7.57-2.46-13.5-2.46Z"/>
+                    <path class="cls-1" d="M23.23,37.05c-3.54,0-7.08-1.35-9.78-4.04-5.39-5.39-5.39-14.16,0-19.55,5.39-5.39,14.16-5.39,19.55,0s5.39,14.16,0,19.55h0c-2.7,2.7-6.24,4.04-9.78,4.04ZM23.23,10.41c-3.28,0-6.57,1.25-9.07,3.75-5,5-5,13.14,0,18.14,5,5,13.14,5,18.14,0,5-5,5-13.14,0-18.14-2.5-2.5-5.79-3.75-9.07-3.75Z"/>
+                </svg>
+                <span>Presence</span>
                 <!-- <p>Artist, Inventor, Philosopher, Futurist, DJ, Hatmaker, Nondual Kinda Guy</p> -->
             </div>
             <ul class="nav-links">
                 <li><a href="#events">Events</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#philosophy">Philosophy</a></li>
-                <!-- <li><a href="#art">Art</a></li> -->
-                <!-- <li><a href="#meditation">Meditation</a></li> -->
+                <li><a href="#practice">Practice</a></li>
                 <li><a href="#mentorship">Mentorship</a></li>
-                <li><a href="#offerings">Work With Me</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-menu">
@@ -148,9 +161,9 @@
         <div class="hero-overlay"></div>
         <div class="container" style="position: relative; z-index: 2; padding-top: 10%;">
             <div style="text-align: left;">
-                <h1>Experience the power of meditation</h1>
-                <p>Explore spirituality, meditation, and transformative philosophy with Paul Bloch.</p>
-                <a href="#about" class="btn">Learn more</a>
+                <h1 style="font-size: 5rem;">Awaken to the power of presence</h1>
+            <p>Explore meditation and transformative nondual teachings with Paul Bloch</p>
+            <a href="#about" class="btn">Learn more</a>
             </div>
         </div>
     </section>
@@ -163,67 +176,38 @@
                 Finding The Way
             </h2>
             <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 2rem;">
-                I'm Paul Bloch - an artist and guide to embodied awakening and discovering your authentic expression. For over 20 years, I've been looking for the God who is already present beneath the stories of who we think we are. My approach connects ancient wisdom and religion with a contemporary understanding of life, consciousness, and the universe we live in. I believe heaven on earth is possible—but it will take our wholes selves to co-create it with God. My goal is to clarify The Way, to help make a spiritual realization accessible, and give confidence and support along the path. Real transformation often contradicts what we think we know about how to change. I'm here as a guide to point out the part of yourself that is always free—and always will be free.
+                Discover a meditation practice that is effortless. Rooted in the timeless wisdom of the great traditions discover a practice that reveals the profound secret hidden in plain sight: When you stop trying to change what is, reality opens in effortless perfection.
             </p>
             <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
                 <a href="#about" class="btn">My Story</a>
-                <a href="#philosophy" class="btn-outline">Core Teachings</a>
+                <a href="#practice" class="btn-outline">Practice</a>
             </div>
         </div>
     </div>
 </section>
 
-
-
     <!-- Events Section -->
-    <section id="events" class="events" style="padding: 6rem 0;">
+       <section id="events" class="events" style="padding: 6rem 0; background-color: white;">
         <div class="container">
             <div class="section-header" style="text-align: left;">
                 <h2>Upcoming Events</h2>
                 <p>Join me for transformative experiences online and in-person</p>
             </div>
-            <div class="events-container">
-                <div class="event-card">
-                    <img src="img/background-aya.jpg" alt="Weekend Retreat" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div class="event-overlay">
-                        <div class="event-date">May 15-17, 2025</div>
-                        <h3>Weekend Retreat: The Art of Presence</h3>
-                        <p>An immersive weekend exploring the fundamentals of nondual awareness through meditation, dialogue, and contemplative exercises.</p>
-                        <p><strong>Location:</strong> TBA</p>
-                        <a href="#" class="btn">Register</a>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <img src="img/background-clouds.jpg" alt="Online Meditation" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div class="event-overlay">
-                        <div class="event-date">Every Tuesday, 8-9pm ET</div>
-                        <h3>Online Meditation Circle</h3>
-                        <p>A weekly gathering for guided meditation and exploration of nondual teachings, open to practitioners of all levels.</p>
-                        <p><strong>Location:</strong> Zoom</p>
-                        <a href="#" class="btn">Join</a>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <img src="img/background-yantra.jpg" alt="Silent Meditation Retreat" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div class="event-overlay">
-                        <div class="event-date">June 10-20, 2025</div>
-                        <h3>10-Day Silent Meditation Intensive</h3>
-                        <p>A profound journey into the depths of consciousness through extended periods of meditation and contemplative inquiry.</p>
-                        <p><strong>Location:</strong> TBA</p>
-                        <a href="#" class="btn">Apply</a>
-                    </div>
+            <div class="events-container" id="events-container">
+                <div id="events-loading" style="display: flex; justify-content: center; align-items: center; padding: 4rem 0;">
+                    <div class="spinner" style="width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #000; border-radius: 50%; animation: spin 1s linear infinite;"></div>
                 </div>
             </div>
         </div>
     </section>
 
         <!-- About Section -->
-        <section id="about" class="about" style="padding: 6rem 0;">
+        <section id="about" class="about" style="padding: 6rem 0; background-color: #f9f7f5;">
             <div class="container">
                 <div class="section-header" style="text-align: left;">
                     <h2>Finding my Way</h2>
                 </div>
-                <div class="about-content">
+                <div class="about-content" style="align-items: flex-start;">
                     <div class="about-text">
                         <p>As a dedicated meditation teacher with over two decades of experience, I guide students through the transformative journey of nondual awareness and spiritual awakening.</p>
                         
@@ -237,74 +221,83 @@
                         
                         <a href="#contact" class="btn">Book a Session</a>
                     </div>
-                    <div class="about-image">
+                    <div class="about-image" style="align-self: flex-start;">
                         <img src="img/paul6.jpg" alt="Paul Bloch">
                     </div>
                 </div>
             </div>
         </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>Experiences</h2>
+    <!-- Practice Section - Four Two-Column Sections -->
+    <section id="practice" style="padding: 0;">
+        <section class="two-column image-left">
+            <div class="image-container">
+              <img src="img/background-meditation2.jpg" alt="Meditation practice">
             </div>
-            <div class="testimonial-container">
-                <div class="testimonial">
-                    <p class="testimonial-text">"Paul's teachings have transformed my understanding of meditation. His ability to bridge Eastern and Western philosophical traditions while maintaining practical relevance is truly remarkable."</p>
-                    <p class="testimonial-author">— SJ</p>
+            <div class="text-container" style="background-color: white;">
+              <div class="text-content">
+                <h2>Discover the Practice of Real Meditation</h2>
+                <p>Believe it or not, meditation is not about becoming calm or even more spiritual. It's about waking up to the simplicity of this moment — where nothing is missing, and everything belongs as it is.</p>
+                <p>The true art of meditation is learning to have nothing, know nothing, and be no one.</p>
+                <p>When you stop searching for meaning and start resting as awareness itself, a quiet joy begins to rise from within. No effort. No goal. No problem. Just the gentle yet profound presence of what IS—the experience of our Original Nature, our Source.</p>
+                <p>Through guided practice, dialogue, and embodied inquiry, you'll learn to rest in awareness — not as a technique, but as a way of living.</p>
+                </div>
+                </div>
+    </section>
+
+          <section class="two-column image-right">
+            <div class="text-container" style="background-color: white;">
+              <div class="text-content">
+                <h2>Find Your Way</h2>
+                <p>Meditation isn't a performance; it's a return to your natural state.</p>
+                <p>If you've ever felt:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                  <li>Like some meditation methods were too rigid or gimmicky</li>
+                  <li>Overwhelmed by stress or the need for constant self-improvement</li>
+                  <li>Drawn to presence but unsure where to begin</li>
+                </ul>
+                <p>Then you're ready to find your way home — through authentic meditation practice.</p>
                 </div>
             </div>
+            <div class="image-container">
+              <img src="img/background-moon2.jpg" alt="Finding your way">
         </div>
     </section>
 
-
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <img src="img/background-ocean3.jpg" alt="Meditation on the beach" style="width: 100%; height: 100%; object-fit: cover; position: absolute;">
-            <div class="hero-content">
-                <h1 style="font-size: 4.5rem;">You can experience liberation without being perfect first.</h1>
+        <section class="two-column image-left">
+            <div class="image-container">
+              <img src="img/background-eye6.jpg" alt="Discovering the self">
             </div>
-        </section>
-
-    <!-- Teachings Section -->
-    <section id="philosophy" class="teachings" style="padding: 6rem 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Core Teachings</h2>
-                <p>Exploring the landscape of consciousness through direct experience</p>
-            </div>
-            <div class="teachings-container">
-                <div class="teaching-card">
-                    <i class="fas fa-om"></i>
-                    <h3>Nondual Meditation</h3>
-                    <p>Experience the seamless unity of awareness and phenomena through meditation practices that dissolve the illusion of separation between self and other, subject and object.</p>
-                </div>
-                <div class="teaching-card">
-                    <i class="fas fa-mountain"></i>
-                    <h3>Direct Path Awakening</h3>
-                    <p>Engage with practical methods for recognizing your true nature directly, without unnecessary conceptual elaboration or prolonged preparatory practices.</p>
-                </div>
-                <div class="teaching-card">
-                    <i class="fas fa-heart"></i>
-                    <h3>Heart-Centered Presence</h3>
-                    <p>Cultivate a profound openness of heart that embraces all experiences with compassionate acceptance while maintaining clear discernment.</p>
-                </div>
-                <div class="teaching-card">
-                    <i class="fas fa-sync-alt"></i>
-                    <h3>Evolutionary Spirituality</h3>
-                    <p>Discover how awakening consciousness can participate consciously in the evolutionary process, integrating being and becoming in a dynamic relationship.</p>
-                </div>
-            </div>
+            <div class="text-container" style="background-color: white;">
+              <div class="text-content">
+                <h2>Discover the Self</h2>
+                <p>Who are you when you stop trying to be someone? In meditation, we turn attention inward not to find answers, but to fall into the mystery of being. Here, the "self" that strives, judges, and fears begins to dissolve. What remains is boundless awareness — alive, luminous, free.</p>
+              </div>
         </div>
     </section>
+
+          <section class="two-column image-right">
+            <div class="text-container" style="background-color: white;">
+              <div class="text-content">
+                <h2>A Timeless Practice</h2>
+                <p>You don't need to live in a monastery or renounce the world.</p>
+                <p>Meditation is for people who live fully — who love, create, lead, and serve.</p>
+                <p>Drawing from the great traditions, this practice bridges the ancient and the modern. It invites awakening not as retreat, but as participation — discovering our true selves as part of an evolving universe. Whether you sit for five minutes or dive into a silent retreat, the invitation is the same:</p>
+                <p><strong>Be still. Realize. Live.</strong></p>
+            </div>
+                </div>
+            <div class="image-container">
+              <img src="img/background-water1.jpg" alt="Timeless practice">
+        </div>
+          </section>
+    </section>
+
 
     <!-- Mentorship Section -->
     <section id="mentorship" class="mentorship" style="padding: 6rem 0;">
         <div class="container">
             <div class="section-header">
-                <h2>1-on-1 Mentorship</h2>
+                <h2>Practice Mentorship</h2>
                 <h3>Personal guidance for your spiritual journey</h3>
             </div>
             
@@ -321,289 +314,32 @@
                         <p>I view the teacher-student relationship as a context for recognizing our shared nature, not as a hierarchy of spiritual attainment. While I offer guidance based on experience, the ultimate authority in your journey is your own direct understanding.</p>
                     </div>
                     
-                    <h3>What Mentorship Includes:</h3>
-                    
-                    <div class="three-column">
-                        <div class="column-item">
-                            <h4>Practice Guidance</h4>
-                            <p>Refining meditation techniques, addressing obstacles, and deepening your understanding of nondual awareness.</p>
-                        </div>
-                        <div class="column-item">
-                            <h4>Applied Integration</h4>
-                            <p>Working with specific life situations where practice meets real-world challenges and opportunities.</p>
-                        </div>
-                        <div class="column-item">
-                            <h4>Study & Contemplation</h4>
-                            <p>Engaging with relevant teachings and texts that illuminate aspects of your current experience.</p>
-                        </div>
-                    </div>
-                    
                     <p>Sessions take place via video call or in person when possible, typically meeting bi-weekly or monthly depending on your needs and schedule.</p>
                     
                     <a href="#contact" class="btn">Apply for Mentorship</a>
                 </div>
-                <div class="mentorship-image"><img src="img/paul6.jpg"></div>
+                <div class="mentorship-image"><img src="img/background-lotus2.jpg"></div>
             </div>
         </div>
     </section>
 
-    <!-- Sangha Section -->
-    <!-- <section id="sangha" class="sangha">
+
+    <!-- Testimonials Section -->
+    <!--
+    <section id="testimonials" class="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2>Sangha: Community of Practice</h2>
-                <p>Walking the path together</p>
+                <h2>Experiences</h2>
             </div>
-            
-            <div class="sangha-container">
-                <div class="sangha-image"></div>
-                <div class="sangha-text">
-                    <p>The Buddha recognized that spiritual community (sangha) is not a luxury but a necessity for sustained practice and awakening. In an era of individualism and digital isolation, creating intentional spaces for authentic connection and collective inquiry has never been more essential.</p>
-                    
-                    <p>Our sangha is a diverse community of practitioners committed to awakening consciousness through direct experience and honest dialogue. We come together to meditate, study, celebrate, and support each other through the joys and challenges of the spiritual path.</p>
-                    
-                    <h3>Community Offerings:</h3>
-                    
-                    <div class="three-column">
-                        <div class="column-item">
-                            <h4>Weekly Meditation</h4>
-                            <p>Guided sitting practice followed by dharma exploration every Tuesday evening online and in select locations.</p>
-                        </div>
-                        <div class="column-item">
-                            <h4>Monthly Intensives</h4>
-                            <p>Deeper dives into practice on the first Saturday of each month, with extended meditation and teaching.</p>
-                        </div>
-                        <div class="column-item">
-                            <h4>Study Groups</h4>
-                            <p>Ongoing exploration of key texts and teachings from various contemplative traditions.</p>
-                        </div>
-                    </div>
-                    
-                    <p>Our community welcomes practitioners at all levels of experience. The only requirements are sincerity, respectful engagement, and a willingness to question your assumptions.</p>
-                    
-                    <div class="emphasis-box">
-                        <h3>Why Community Matters</h3>
-                        <p>In spiritual practice, we often encounter challenges that are difficult to navigate alone—states of confusion, resistance, or breakthrough experiences that need context and reflection. A sangha provides the mirror of relationship where we can see ourselves more clearly and receive support when the path becomes difficult.</p>
-                        
-                        <p>Through collective practice, we create a field of shared intention that amplifies individual efforts and reminds us that awakening is not just personal—it's a contribution to the evolution of consciousness itself.</p>
-                    </div>
-                    
-                    <a href="#events" class="btn">Join Our Next Gathering</a>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Paul's teachings have transformed my understanding of meditation. His ability to bridge Eastern and Western philosophical traditions while maintaining practical relevance is truly remarkable."</p>
+                    <p class="testimonial-author">— SJ</p>
                 </div>
-            </div>
-        </div> -->
-    </section>
-
-    <!-- Books Section -->
-    <!-- <section id="books" class="books">
-        <div class="container">
-            <div class="section-header">
-                <h2>Published Works</h2>
-                <p>Explorations of consciousness through the written word</p>
-            </div>
-            <div class="books-container">
-                <div class="book-card">
-                    <div class="book-image"></div>
-                    <h3>The Paradox of Being</h3>
-                    <p>An exploration of nondual awareness through the lens of both Eastern and Western contemplative traditions.</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-                <div class="book-card">
-                    <div class="book-image"></div>
-                    <h3>Meditation Beyond Method</h3>
-                    <p>A practical guide to transcending technique and discovering the natural state of awareness.</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-                <div class="book-card">
-                    <div class="book-image"></div>
-                    <h3>The Integral Vision</h3>
-                    <p>A comprehensive framework for understanding the evolution of consciousness in individuals and collectives.</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-  
-
-    <!-- Podcast Section -->
-    <!-- <section id="podcast" class="podcast">
-        <div class="container">
-            <div class="section-header">
-                <h2>The Nondual Dialogues Podcast</h2>
-                <p>Conversations at the intersection of wisdom, creativity, and evolution</p>
-            </div>
-            <div class="podcast-episodes">
-                <div class="podcast-episode">
-                    <h3 class="podcast-title">The Paradox of Effort and Effortlessness</h3>
-                    <p class="podcast-date">April 15, 2025</p>
-                    <p>Exploring the delicate balance between intentional practice and allowing natural awareness to reveal itself.</p>
-                    <a href="#" class="btn">Listen</a>
-                </div>
-                <div class="podcast-episode">
-                    <h3 class="podcast-title">Embodying Nonduality in Relationship</h3>
-                    <p class="podcast-date">March 28, 2025</p>
-                    <p>How nondual awareness transforms our interactions and creates space for authentic connection.</p>
-                    <a href="#" class="btn">Listen</a>
-                </div>
-                <div class="podcast-episode">
-                    <h3 class="podcast-title">Creativity as Spiritual Practice</h3>
-                    <p class="podcast-date">March 10, 2025</p>
-                    <p>A conversation with visual artist Maya Lin about the intersection of creative expression and spiritual awakening.</p>
-                    <a href="#" class="btn">Listen</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-
-                            <!-- Vertically Centered Split Section -->
-<!-- <section id="centered-split" class="centered-split">
-    <div class="container">
-        <div class="split-content">
-            <div class="split-image">
-                <img src="img/background-beachfeet.jpg" alt="Description">
-            </div>
-            <div class="split-text">
-                <div class="text-wrapper">
-                    <h2>Centered Content</h2>
-                    <p>This version ensures the text content is perfectly vertically centered regardless of image height.</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-        <!-- Work With Me / Offerings Section -->
-        <section id="offerings" class="offerings" style="padding: 6rem 0;">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Let's collaborate in consciousness</h2>
-                    <p>Offerings to support our personal and collective journey of awakening and embodiment</p>
-                </div>
-    
-                <div class="offering-container">
-                    <div class="offering-header">
-                        <div class="offering-icon">
-                            <i class="fas fa-microphone-alt"></i>
-                        </div>
-                        <h3>Speaking & Keynotes</h3>
-                    </div>
-                    <div class="offering-details">
-                        <p>Drawing from over two decades of immersion in contemplative traditions and contemporary wisdom teachings, I offer engaging keynote presentations that bridge ancient philosophy with modern life challenges. My talks are designed to be accessible yet profound, integrating storytelling, practical wisdom, and occasional bursts of humor to illuminate the path of conscious evolution.</p>
-                        
-                        <p>I speak at conferences, corporate events, universities, and intimate gatherings worldwide on topics including:</p>
-                        
-                        <div class="three-column">
-                            <div class="column-item">
-                                <h4>Nondual Awareness</h4>
-                                <p>Exploring the direct experience of unitive consciousness beyond conceptual frameworks.</p>
-                            </div>
-                            <div class="column-item">
-                                <h4>Evolutionary Spirituality</h4>
-                                <p>Integrating ancient wisdom with contemporary understanding of human development.</p>
-                            </div>
-                            <div class="column-item">
-                                <h4>The Creative Process</h4>
-                                <p>Navigating the territory where spiritual insight meets artistic expression.</p>
-                            </div>
-                        </div>
-                        
-                        <a href="#contact" class="btn">Inquire About Speaking</a>
-                    </div>
-                </div>
-    
-                <div class="offering-container">
-                    <div class="offering-header">
-                        <div class="offering-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Meditation Instruction</h3>
-                    </div>
-                    <div class="offering-details">
-                        <p>Meditation is both an art and a science—a direct path to recognizing our true nature and a practical tool for navigating daily life. My approach to meditation instruction is rooted in traditional contemplative methods while remaining contemporary and accessible.</p>
-                        
-                        <p>I offer meditation instruction in various contexts:</p>
-                        
-                        <div class="three-column">
-                            <div class="column-item">
-                                <h4>Corporate & Organizations</h4>
-                                <p>Tailored programs that introduce meditation as a tool for clarity, creativity, and resilience in professional environments.</p>
-                            </div>
-                            <div class="column-item">
-                                <h4>Beginner Workshops</h4>
-                                <p>Foundational instruction for those new to meditation, focusing on establishing a sustainable practice.</p>
-                            </div>
-                            <div class="column-item">
-                                <h4>Advanced Retreats</h4>
-                                <p>Immersive experiences for experienced practitioners looking to deepen their understanding and practice.</p>
-                            </div>
-                        </div>
-                        
-                        <p>Whether you're seeking to begin a meditation practice or deepen an existing one, I provide clear guidance that honors both traditional lineages and contemporary scientific understanding.</p>
-                        
-                        <a href="#contact" class="btn">Schedule Meditation Instruction</a>
-                    </div>
-                </div>
-    
-                <div class="offering-container">
-                    <div class="offering-header">
-                        <div class="offering-icon">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <h3>Workshops & Intensives</h3>
-                    </div>
-                    <div class="offering-details">
-                        <p>These immersive experiences combine theory and practice, providing a container for transformative insight and embodied understanding. Each workshop creates a field of collective inquiry where participants can explore the territory of consciousness directly.</p>
-                        
-                        <div class="three-column">
-                            <div class="column-item">
-                                <h4>Weekend Intensives</h4>
-                                <p>Deep dives into specific aspects of nondual teachings and practices over 2-3 days.</p>
-                            </div>
-                            <div class="column-item">
-                                <h4>Week-long Retreats</h4>
-                                <p>Extended immersions that allow for progressive deepening of practice and understanding.</p>
-                            </div>
-                            <div class="column-item">
-                                <h4>Online Courses</h4>
-                                <p>Structured learning experiences that unfold over multiple sessions, accessible from anywhere.</p>
-                            </div>
-                        </div>
-                        
-                        <a href="#events" class="btn">View Upcoming Workshops</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="two-column image-left">
-            <div class="image-container">
-              <img src="img/background-lotus.jpg" alt="Meditation practice">
-            </div>
-            <div class="text-container">
-              <div class="text-content">
-                <h2>Discover Nondual Awareness</h2>
-                <p>Experience the seamless unity of awareness beyond concepts of self and other. My approach makes profound realization accessible through direct experience rather than complex philosophy.</p>
-                <a href="#contact" class="btn">Learn More</a>
               </div>
             </div>
           </section>
-
-          <section class="two-column image-right">
-            <div class="text-container">
-              <div class="text-content">
-                <h2>20 Years of Spiritual Guidance</h2>
-                <p>Trained in Tibetan traditions and ordained as a Zen monk, I've spent decades guiding students through the transformative journey of awakening. My teaching integrates ancient wisdom with contemporary understanding.</p>
-                <a href="#about" class="btn">My Story</a>
-              </div>
-            </div>
-            <div class="image-container">
-              <img src="img/background-candles1.jpg" alt="Spiritual practice">
-            </div>
-          </section>
-
+    -->
 
 <!-- Contact Section -->
 <section id="contact" class="contact" style="padding: 6rem 0; background-color: white;">
@@ -612,23 +348,8 @@
             <h2>Connect With Me</h2>
             <p>For inquiries about private sessions, speaking engagements, or retreat participation</p>
         </div>
-        <div class="contact-form">
-            <form id="contactForm" action="https://formspree.io/f/meogqgly" method="POST">
-                <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="subject" class="form-control" placeholder="Subject">
-                </div>
-                <div class="form-group">
-                    <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-                <div id="form-status" style="margin-top: 1rem;"></div>
-            </form>
+        <div class="contact-form" style="text-align: center;">
+            <a href="mailto:findpresence@gmail.com" class="btn" style="display: inline-block;">Send Email</a>
         </div>
     </div>
 </section>
@@ -645,7 +366,7 @@
                 <a href="https://paulbloch.substack.com/" class="btn" target="_blank">Subscribe on Substack</a>
             </div>
             
-            <ul class="footer-links">
+            <ul class="footer-links" style="display: none;">
                 <li><a href="https://substack.com/paulbloch"><i class="fa-solid fa-rainbow"></i></i></a></li>
                 <li><a href="https://instagram.com/paulbloch"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="https://youtube.com/paulstuartbloch"><i class="fab fa-youtube"></i></a></li>
@@ -771,20 +492,16 @@ if (contactForm) {
     </script>
 
 <script>
-    // Initialize AOS (Animate On Scroll) library
     document.addEventListener('DOMContentLoaded', function() {
-      AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        offset: 100
-      });
     
       // Carousel functionality
       const track = document.querySelector('.carousel-track');
       const cards = document.querySelectorAll('.carousel-card');
       const prevBtn = document.querySelector('.carousel-prev');
       const nextBtn = document.querySelector('.carousel-next');
+      
+      // Only initialize carousel if elements exist
+      if (track && cards.length > 0 && prevBtn && nextBtn) {
       let currentPosition = 0;
       const cardWidth = cards[0].offsetWidth + 32; // include gap
     
@@ -803,6 +520,7 @@ if (contactForm) {
         }
         track.style.transform = `translateX(${currentPosition}px)`;
       });
+      } // End carousel initialization
     
       // Audio player functionality
       const playButtons = document.querySelectorAll('.play-button, .play-pause');
@@ -842,6 +560,574 @@ if (contactForm) {
           timeDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
         });
       });
+    });
+
+    // Load events dynamically from Google Sheet
+    document.addEventListener('DOMContentLoaded', function() {
+      const eventsContainer = document.getElementById('events-container');
+      if (!eventsContainer) return;
+
+      const sheetId = '1UEF4ifZwx2k6KrcfjWHQhjlds5tGmixcOPZZYTOYyeM';
+      // Use CORS proxy to access Google Sheets CSV export (direct access has CORS issues)
+      const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=0`;
+
+      // Array of background images to cycle through
+      const backgroundImages = [
+        'img/background-meditation3.jpg',
+        'img/background-lotus.jpg',
+        'img/background-incense2.jpg',
+        'img/background-candles1.jpg',
+        'img/background-moon1.jpg',
+        'img/background-ocean4.jpg',
+        'img/background-prism1.jpg',
+        'img/background-sparkle1.jpg'
+      ];
+
+
+      // Helper function to parse CSV (handles both comma and tab-separated)
+      function parseSheetCSV(text) {
+        const lines = text.split('\n').map(line => line.trim()).filter(line => line);
+        if (lines.length === 0) {
+          console.log('No lines found in CSV');
+          return [];
+        }
+        
+        // Detect delimiter - check if first line has tabs (Google Sheets CSV export uses commas)
+        const firstLine = lines[0];
+        const hasTabs = firstLine.includes('\t');
+        const delimiter = hasTabs ? '\t' : ',';
+        
+        console.log('Using delimiter:', delimiter === '\t' ? 'TAB' : 'COMMA');
+        console.log('First line:', firstLine.substring(0, 200));
+        
+        // Parse headers
+        const headers = parseDelimitedLine(lines[0], delimiter);
+        console.log('Headers found:', headers);
+        const rows = [];
+
+        for (let i = 1; i < lines.length; i++) {
+          const values = parseDelimitedLine(lines[i], delimiter);
+          if (values.length === 0 || values.every(v => !v.trim())) continue;
+          
+          const row = {};
+          headers.forEach((header, index) => {
+            const headerKey = header.trim();
+            const value = values[index] ? values[index].trim() : '';
+            row[headerKey] = value;
+          });
+          
+          // Debug first row
+          if (i === 1) {
+            console.log('First data row:', row);
+          }
+          
+          // Only add rows that have a Date (check various possible date column names)
+          const dateValue = row.Date || row.date || row['Date '] || row['date '];
+          if (dateValue && dateValue.trim()) {
+            rows.push(row);
+          }
+        }
+        
+        console.log('Total rows parsed:', rows.length);
+        return rows;
+      }
+
+      // Helper to parse delimited line handling quoted fields
+      function parseDelimitedLine(line, delimiter) {
+        const result = [];
+        let current = '';
+        let inQuotes = false;
+        
+        for (let i = 0; i < line.length; i++) {
+          const char = line[i];
+          
+          if (char === '"') {
+            inQuotes = !inQuotes;
+          } else if (char === delimiter && !inQuotes) {
+            result.push(current);
+            current = '';
+          } else {
+            current += char;
+          }
+        }
+        result.push(current);
+        return result;
+      }
+
+      // Helper function to format date
+      function formatDate(dateString) {
+        if (!dateString || !dateString.trim()) return null;
+        
+        try {
+          // Try parsing as MM/DD/YYYY first (Google Sheets format)
+          const parts = dateString.trim().split('/');
+          if (parts.length === 3) {
+            const month = parseInt(parts[0], 10);
+            const day = parseInt(parts[1], 10);
+            const year = parseInt(parts[2], 10);
+            if (!isNaN(month) && !isNaN(day) && !isNaN(year)) {
+              return new Date(year, month - 1, day);
+            }
+          }
+          
+          // Fallback to standard Date parsing
+          const date = new Date(dateString);
+          if (!isNaN(date.getTime())) {
+            return date;
+          }
+          
+          return null;
+        } catch (e) {
+          console.error('Error parsing date:', dateString, e);
+          return null;
+        }
+      }
+
+      // Helper function to get day of the week
+      function getDayOfWeek(date) {
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        return days[date.getDay()];
+      }
+
+      // Helper function to format date string
+      function formatDateString(date) {
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                      'July', 'August', 'September', 'October', 'November', 'December'];
+        const dayOfWeek = getDayOfWeek(date);
+        return `${dayOfWeek} • ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+      }
+
+      // Helper function to check if date is today
+      function isToday(date) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const eventDate = new Date(date);
+        eventDate.setHours(0, 0, 0, 0);
+        return eventDate.getTime() === today.getTime();
+      }
+
+      // Helper function to get timezone offset for PT (Pacific Time)
+      // PT is UTC-8 (PST) or UTC-7 (PDT), we'll use PST for simplicity
+      // For calendar compatibility, we'll use UTC format with TZID
+      function getTimezoneOffset(timezone) {
+        // Map common timezone abbreviations
+        const tzMap = {
+          'PT': -8,        // Pacific Time (PST)
+          'PST': -8,
+          'PDT': -7,
+          'ET': -5,        // Eastern Time (EST)
+          'EST': -5,
+          'EDT': -4,
+          'CT': -6,        // Central Time (CST)
+          'CST': -6,
+          'CDT': -5,
+          'MT': -7,        // Mountain Time (MST)
+          'MST': -7,
+          'MDT': -6
+        };
+        
+        if (!timezone) return -8; // Default to PT
+        
+        const tzUpper = timezone.toUpperCase().trim();
+        // Check if it's just "PT" or contains timezone info
+        if (tzMap[tzUpper]) {
+          return tzMap[tzUpper];
+        }
+        
+        // Try to extract UTC offset from strings like "PT UTC -8"
+        const offsetMatch = timezone.match(/UTC\s*([+-]?\d+)/i);
+        if (offsetMatch) {
+          return parseInt(offsetMatch[1], 10);
+        }
+        
+        return -8; // Default to PT (PST)
+      }
+
+      // Helper function to format date for ICS with timezone (YYYYMMDDTHHmmssZ for UTC or TZID)
+      function formatICSDate(date, timeString, timezone) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        
+        // Parse time if provided (format: "5:00 PM")
+        let hours = 0;
+        let minutes = 0;
+        if (timeString) {
+          const timeMatch = timeString.match(/(\d+):(\d+)\s*(AM|PM)/i);
+          if (timeMatch) {
+            hours = parseInt(timeMatch[1], 10);
+            const mins = parseInt(timeMatch[2], 10);
+            const ampm = timeMatch[3].toUpperCase();
+            
+            if (ampm === 'PM' && hours !== 12) hours += 12;
+            if (ampm === 'AM' && hours === 12) hours = 0;
+            minutes = mins;
+          }
+        }
+        
+        // Convert to UTC based on timezone offset
+        const tzOffset = getTimezoneOffset(timezone);
+        const utcHours = hours - tzOffset;
+        let adjustedDate = new Date(Date.UTC(year, date.getMonth(), day, utcHours, minutes, 0));
+        
+        // Format as UTC
+        const utcYear = adjustedDate.getUTCFullYear();
+        const utcMonth = String(adjustedDate.getUTCMonth() + 1).padStart(2, '0');
+        const utcDay = String(adjustedDate.getUTCDate()).padStart(2, '0');
+        const utcHoursStr = String(adjustedDate.getUTCHours()).padStart(2, '0');
+        const utcMinutesStr = String(adjustedDate.getUTCMinutes()).padStart(2, '0');
+        
+        return `${utcYear}${utcMonth}${utcDay}T${utcHoursStr}${utcMinutesStr}00Z`;
+      }
+
+      // Function to generate ICS file content
+      function generateICS(event) {
+        const dateValue = event.Date || event.date || event['Date '] || event['date '];
+        const date = formatDate(dateValue);
+        if (!date) return null;
+        
+        const timeValue = event.Time || event.time || event['Time '] || event['time '];
+        const timezoneValue = event.TimeZone || event.timezone || event['TimeZone '] || event['timezone '] || 'PT';
+        const titleValue = event.Title || event.title || event['Title '] || event['title '] || 'Meditation Circle';
+        const contentValue = event.Content || event.content || event['Content '] || event['content '] || '';
+        const locationValue = event.Location || event.location || event['Location '] || event['location '] || 'Online';
+        const meetingLink = event.MeetingLink || event.meetinglink || event['MeetingLink '] || event['meetinglink '] || '';
+        const donationLink = event.DonationLink || event.donationlink || event['DonationLink '] || event['donationlink '] || '';
+        
+        // Create start date/time (1 hour duration)
+        const startDate = formatICSDate(date, timeValue, timezoneValue);
+        
+        // Calculate end date (1 hour later)
+        const endDate = new Date(date);
+        if (timeValue) {
+          const timeMatch = timeValue.match(/(\d+):(\d+)\s*(AM|PM)/i);
+          if (timeMatch) {
+            let hours = parseInt(timeMatch[1], 10);
+            const minutes = parseInt(timeMatch[2], 10);
+            const ampm = timeMatch[3].toUpperCase();
+            if (ampm === 'PM' && hours !== 12) hours += 12;
+            if (ampm === 'AM' && hours === 12) hours = 0;
+            endDate.setHours(hours + 1, minutes, 0);
+          }
+        } else {
+          // If no time, default to 1 hour from start
+          endDate.setHours(endDate.getHours() + 1);
+        }
+        const endDateStr = formatICSDate(endDate, timeValue, timezoneValue);
+        
+        // Escape special characters for ICS format
+        // Note: In ICS, newlines should be \n (single backslash n), not \\n
+        function escapeICS(text) {
+          if (!text) return '';
+          // First, normalize all line endings to \n
+          let normalized = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+          
+          // Then escape special characters
+          normalized = normalized.replace(/\\/g, '\\\\')
+                                 .replace(/;/g, '\\;')
+                                 .replace(/,/g, '\\,');
+          
+          // For ICS format, newlines should be literal \n (not escaped)
+          // But we need to be careful - some calendar apps expect \\n
+          // Let's use \n which is standard for ICS
+          normalized = normalized.replace(/\n/g, '\\n');
+          
+          return normalized;
+        }
+        
+        // Build comprehensive description with all event details
+        // Clean up the content first - remove any trailing whitespace/newlines
+        let fullDescription = (contentValue || '').trim();
+        
+        // Remove any trailing periods or punctuation that might interfere
+        fullDescription = fullDescription.replace(/[.\u2014\u2013]\s*$/, '');
+        
+        // Build link section separately to ensure clean formatting
+        const linkParts = [];
+        if (meetingLink) {
+          // Ensure meeting link is clean (no trailing newlines)
+          const cleanMeetingLink = meetingLink.trim();
+          linkParts.push(`Meeting Link: ${cleanMeetingLink}`);
+        }
+        if (donationLink) {
+          // Ensure donation link is clean (no trailing newlines)
+          const cleanDonationLink = donationLink.trim();
+          linkParts.push(`Donation Link: ${cleanDonationLink}`);
+        }
+        
+        // Combine with proper spacing
+        if (linkParts.length > 0) {
+          // Add one blank line before links section (not two)
+          fullDescription += '\n';
+          // Add each link on its own line with space between them
+          fullDescription += linkParts.join('\n');
+        }
+        
+        // Generate unique ID
+        const uid = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}@presence-meditation`;
+        
+        // Build ICS content with all fields
+        const icsContent = [
+          'BEGIN:VCALENDAR',
+          'VERSION:2.0',
+          'PRODID:-//Presence Meditation//Event Calendar//EN',
+          'CALSCALE:GREGORIAN',
+          'METHOD:PUBLISH',
+          'BEGIN:VEVENT',
+          `UID:${uid}`,
+          `DTSTART:${startDate}`,
+          `DTEND:${endDateStr}`,
+          `DTSTAMP:${formatICSDate(new Date(), null, 'PT')}`,
+          `SUMMARY:${escapeICS(titleValue)}`,
+          `DESCRIPTION:${escapeICS(fullDescription)}`,
+          `LOCATION:${escapeICS(locationValue)}`,
+          ...(meetingLink ? [`URL:${meetingLink}`] : []),
+          ...(meetingLink ? [`X-ALT-DESC;FMTTYPE=text/html:${escapeICS(`<p>${escapeICS(contentValue)}</p><p><a href="${meetingLink}">Join Meeting</a></p>${donationLink ? `<p><a href="${donationLink}">Donate</a></p>` : ''}`)}`] : []),
+          'STATUS:CONFIRMED',
+          'SEQUENCE:0',
+          'TRANSP:OPAQUE',
+          'END:VEVENT',
+          'END:VCALENDAR'
+        ].join('\r\n');
+        
+        return icsContent;
+      }
+
+      // Function to download ICS file
+      function downloadICS(event) {
+        const icsContent = generateICS(event);
+        if (!icsContent) {
+          console.error('Could not generate ICS file');
+          return;
+        }
+        
+        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        
+        const dateValue = event.Date || event.date || event['Date '] || event['date '];
+        const date = formatDate(dateValue);
+        const dateStr = date ? formatDateString(date).replace(/,/g, '').replace(/\s+/g, '-') : 'event';
+        const titleValue = (event.Title || event.title || event['Title '] || event['title '] || 'Meditation-Circle').replace(/\s+/g, '-');
+        
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${titleValue}-${dateStr}.ics`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
+
+      // Function to create event list item HTML
+      function createEventCard(event, imageIndex) {
+        // Try multiple field name variations
+        const dateValue = event.Date || event.date || event['Date '] || event['date '];
+        const date = formatDate(dateValue);
+        const dateString = date ? formatDateString(date) : (dateValue || '');
+        const timeValue = event.Time || event.time || event['Time '] || event['time '];
+        const timeString = timeValue ? ` • ${timeValue}` : '';
+        const timeZoneValue = event.TimeZone || event.timezone || event['TimeZone '] || event['timezone '];
+        const timeZoneString = timeZoneValue ? ` ${timeZoneValue}` : '';
+        
+        // Check if event is today
+        const eventIsToday = date ? isToday(date) : false;
+        
+        // Truncate description if too long
+        const contentValue = event.Content || event.content || event['Content '] || event['content '];
+        let description = contentValue || '';
+        if (description.length > 300) {
+          description = description.substring(0, 300) + '...';
+        }
+        
+        const titleValue = event.Title || event.title || event['Title '] || event['title '];
+        const locationValue = event.Location || event.location || event['Location '] || event['location '];
+        const meetingLink = event.MeetingLink || event.meetinglink || event['MeetingLink '] || event['meetinglink '];
+        const donationLink = event.DonationLink || event.donationlink || event['DonationLink '] || event['donationlink '];
+
+        // Store event data in a data attribute for calendar download
+        const eventData = encodeURIComponent(JSON.stringify(event));
+        
+        return `
+          <div class="event-item" style="padding: 2rem 0; border-bottom: 1px solid #e5e5e5;">
+            <div class="event-date" style="font-size: 0.9rem; color: #666; margin-bottom: 0.5rem;">${dateString}${timeString}${timeZoneString}</div>
+            <h3 style="margin: 0 0 1rem 0; font-size: 1.5rem;">${titleValue || 'Meditation Circle'}</h3>
+            <p style="margin: 0 0 1rem 0; line-height: 1.6; color: #333;">${description}</p>
+            <p style="margin: 0 0 1rem 0;"><strong>Location:</strong> ${locationValue || 'Online'}</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              ${meetingLink && eventIsToday ? `<a href="${meetingLink}" class="btn" target="_blank">Join Meeting</a>` : ''}
+              ${donationLink ? `<a href="${donationLink}" class="btn-outline" target="_blank">Donate</a>` : ''}
+              ${!eventIsToday ? `<button class="btn-outline add-to-calendar-btn" data-event='${eventData}' style="cursor: pointer;">Add To Calendar</button>` : ''}
+            </div>
+          </div>
+        `;
+      }
+
+      // Make downloadICS available globally
+      window.downloadEventICS = function(eventDataString) {
+        try {
+          const event = JSON.parse(decodeURIComponent(eventDataString));
+          downloadICS(event);
+        } catch (e) {
+          console.error('Error parsing event data:', e);
+        }
+      };
+      
+      // Set up event listeners for Add to Calendar buttons after events are displayed
+      function setupCalendarButtons() {
+        document.querySelectorAll('.add-to-calendar-btn').forEach(button => {
+          button.addEventListener('click', function() {
+            const eventData = this.getAttribute('data-event');
+            if (eventData) {
+              window.downloadEventICS(eventData);
+            }
+          });
+        });
+      }
+
+      // Fetch and display events using CORS proxy
+      function loadEvents() {
+        // Use CORS proxy to fetch CSV
+        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(csvUrl)}`)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Failed to fetch CSV');
+            }
+            return response.json();
+          })
+          .then(data => {
+            if (data && data.contents) {
+              let csvContent = data.contents;
+              
+              // Check if contents is a data URI (base64 encoded)
+              if (csvContent.startsWith('data:text/csv;base64,')) {
+                // Extract and decode base64 content
+                const base64Data = csvContent.split(',')[1];
+                csvContent = atob(base64Data);
+                console.log('Decoded base64 CSV data:', csvContent.substring(0, 500));
+              } else {
+                console.log('Raw CSV data:', csvContent.substring(0, 500));
+              }
+              
+              const events = parseSheetCSV(csvContent);
+              console.log('Parsed events:', events); // Debug: show parsed events
+              if (events && events.length > 0) {
+                displayEvents(events);
+              } else {
+                console.error('No events parsed from CSV. CSV content length:', csvContent.length);
+                throw new Error('No events found in sheet');
+              }
+            } else {
+              throw new Error('No data in CSV response');
+            }
+          })
+          .catch(error => {
+            console.error('Error loading events:', error);
+            console.error('Error details:', error.message, error.stack);
+            // Hide loading spinner
+            const loadingSpinner = document.getElementById('events-loading');
+            if (loadingSpinner) {
+              loadingSpinner.style.display = 'none';
+            }
+            eventsContainer.innerHTML = `<p style="text-align: center; padding: 2rem; color: #999;">Unable to load events at this time. Please check back later.<br><small style="font-size: 0.8rem;">Error: ${error.message}</small></p>`;
+          });
+      }
+
+      function displayEvents(events) {
+        // Hide loading spinner
+        const loadingSpinner = document.getElementById('events-loading');
+        if (loadingSpinner) {
+          loadingSpinner.style.display = 'none';
+        }
+        
+        console.log('Displaying events, count:', events.length);
+        console.log('Sample event:', events[0]);
+          
+        // Filter out past events (compare dates without time - exclude events before today)
+        const now = new Date();
+        now.setHours(0, 0, 0, 0);
+        const upcomingEvents = events.filter(event => {
+          // Try multiple date field name variations
+          const dateValue = event.Date || event.date || event['Date '] || event['date '];
+          const eventDate = formatDate(dateValue);
+          if (!eventDate) {
+            console.log('Event missing date:', event);
+            return false;
+          }
+          const eventDateOnly = new Date(eventDate);
+          eventDateOnly.setHours(0, 0, 0, 0);
+          // Only include events that are today or in the future (not past)
+          return eventDateOnly >= now;
+        });
+
+        console.log('Upcoming events after filtering:', upcomingEvents.length);
+
+        // Sort events by date
+        upcomingEvents.sort((a, b) => {
+          const dateA = formatDate(a.Date || a.date || a['Date '] || a['date ']);
+          const dateB = formatDate(b.Date || b.date || b['Date '] || b['date ']);
+          if (!dateA || !dateB) return 0;
+          return dateA - dateB;
+        });
+
+        // Generate HTML for events with pagination (show 3 at a time)
+        if (upcomingEvents.length === 0) {
+          eventsContainer.innerHTML = '<p style="text-align: center; padding: 2rem;">No upcoming events scheduled. Check back soon!</p>';
+        } else {
+          eventsContainer.style.display = 'block';
+          // Store all events for pagination
+          window.allEvents = upcomingEvents;
+          window.displayedEventsCount = 0;
+          displayNextEvents(3);
+        }
+      }
+
+      // Function to display next N events
+      function displayNextEvents(count) {
+        const eventsContainer = document.getElementById('events-container');
+        if (!eventsContainer || !window.allEvents) return;
+
+        const startIndex = window.displayedEventsCount || 0;
+        const endIndex = Math.min(startIndex + count, window.allEvents.length);
+        const eventsToShow = window.allEvents.slice(startIndex, endIndex);
+
+        if (startIndex === 0) {
+          // First load - clear container and show first batch
+          eventsContainer.innerHTML = '';
+        }
+
+        // Add events to container
+        eventsToShow.forEach((event, index) => {
+          const eventHTML = createEventCard(event, startIndex + index);
+          eventsContainer.insertAdjacentHTML('beforeend', eventHTML);
+        });
+
+        // Set up event listeners for calendar buttons
+        setupCalendarButtons();
+
+        // Update displayed count
+        window.displayedEventsCount = endIndex;
+
+        // Add or update "View More" button
+        const existingButton = document.getElementById('view-more-events-btn');
+        if (existingButton) {
+          existingButton.remove();
+        }
+
+        if (window.displayedEventsCount < window.allEvents.length) {
+          const viewMoreBtn = document.createElement('button');
+          viewMoreBtn.id = 'view-more-events-btn';
+          viewMoreBtn.className = 'btn-outline';
+          viewMoreBtn.textContent = `View More (${window.allEvents.length - window.displayedEventsCount} remaining)`;
+          viewMoreBtn.style.cssText = 'margin: 2rem auto; display: block; cursor: pointer;';
+          viewMoreBtn.addEventListener('click', () => {
+            displayNextEvents(3);
+          });
+          eventsContainer.appendChild(viewMoreBtn);
+        }
+      }
+
+      // Load events on page load
+      loadEvents();
     });
     </script>
 
