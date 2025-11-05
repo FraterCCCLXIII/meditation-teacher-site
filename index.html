@@ -47,10 +47,7 @@
       <div class="modal-content">
         <h2>Join My Newsletter</h2>
         <p>Get the latest insights on spirituality, meditation, and nondual teachings delivered directly to your inbox.</p>
-        <div class="subscription-form">
-          <iframe src="https://paulbloch.substack.com/embed" width="100%" height="150" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-        </div>
-        <a href="https://paulbloch.substack.com/" target="_blank" class="btn-outline">Visit My Substack</a>
+        <!-- Subscription form removed - now using MailerLite modal -->
         <div>
           <a class="dismiss-link" id="dismiss-modal">No thanks, maybe later</a>
         </div>
@@ -87,17 +84,17 @@
               <div class="ml-form-embedWrapper embedForm">
                 <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
                   <div class="ml-form-embedContent" style="display: none;"></div>
-                  <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1899959/forms/170196726364243107/subscribe" data-code="" method="post" target="_blank">
+                  <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1899959/forms/170196726364243107/subscribe" data-code="" method="post" id="ml-form-32945053">
                     <div class="ml-form-formContent">
                       <div class="ml-form-fieldRow ml-last-item">
                         <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                          <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email">
+                          <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email" id="ml-form-email-32945053">
                         </div>
                       </div>
                     </div>
                     <input type="hidden" name="ml-submit" value="1">
                     <div class="ml-form-embedSubmit">
-                      <button type="submit" class="primary">Subscribe</button>
+                      <button type="submit" class="primary" id="ml-form-submit-32945053">Subscribe</button>
                       <button disabled="disabled" style="display: none;" type="button" class="loading">
                         <div class="ml-form-embedSubmitLoad"></div>
                         <span class="sr-only">Loading...</span>
@@ -132,7 +129,6 @@
     // Get the modal elements
     const modal = document.getElementById('subscription-modal');
     const dismissBtn = document.getElementById('dismiss-modal');
-    const showModalBtn = document.getElementById('show-modal-btn');
     
     // Function to show the modal
     function showModal() {
@@ -150,31 +146,42 @@
     }
     
     // Event listeners
-    dismissBtn.addEventListener('click', hideModal);
-    showModalBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      showModal();
-    });
+    if (dismissBtn) {
+      dismissBtn.addEventListener('click', hideModal);
+    }
     
     // Close modal when clicking outside
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        hideModal();
-      }
-    });
-    
-    // Removed auto-show on page load - modal now only shows when button is clicked
+    if (modal) {
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          hideModal();
+        }
+      });
+    }
   </script>
 
   <script>
     // MailerLite Modal functionality
     const mailerliteModal = document.getElementById('mailerlite-modal');
     const dismissMailerliteBtn = document.getElementById('dismiss-mailerlite-modal');
+    const showModalBtn = document.getElementById('show-modal-btn');
     
     // Function to show the MailerLite modal
     function showMailerliteModal() {
       mailerliteModal.classList.add('show');
       document.body.style.overflow = 'hidden';
+      
+      // MailerLite forms should auto-initialize, but since the form is initially hidden,
+      // we may need to trigger initialization when modal becomes visible
+      setTimeout(function() {
+        // Force MailerLite to re-scan for forms when modal becomes visible
+        if (typeof ml !== 'undefined' && ml.webforms) {
+          // Try to reload forms
+          if (typeof ml.webforms.load === 'function') {
+            ml.webforms.load();
+          }
+        }
+      }, 100);
     }
     
     // Function to hide the MailerLite modal
@@ -196,12 +203,22 @@
       dismissMailerliteBtn.addEventListener('click', hideMailerliteModal);
     }
     
+    // Newsletter button triggers MailerLite modal
+    if (showModalBtn) {
+      showModalBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        showMailerliteModal();
+      });
+    }
+    
     // Close modal when clicking outside
-    mailerliteModal.addEventListener('click', function(e) {
-      if (e.target === mailerliteModal) {
-        hideMailerliteModal();
-      }
-    });
+    if (mailerliteModal) {
+      mailerliteModal.addEventListener('click', function(e) {
+        if (e.target === mailerliteModal) {
+          hideMailerliteModal();
+        }
+      });
+    }
     
     // Show the MailerLite modal on startup if it hasn't been shown before
     window.addEventListener('load', function() {
@@ -224,6 +241,7 @@
   
   <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
   <script>
+    // Load MailerLite form configuration - exactly as provided by MailerLite
     fetch("https://assets.mailerlite.com/jsonp/1899959/forms/170196726364243107/takel");
   </script>
 
@@ -627,6 +645,11 @@
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
+                // Validate selector - must start with # and have at least one character after
+                if (!targetId || !targetId.startsWith('#') || targetId.length < 2) {
+                    return;
+                }
+                
                 const targetElement = document.querySelector(targetId);
                 
                 if (targetElement) {
@@ -1231,6 +1254,17 @@ if (contactForm) {
 
       // Fetch and display events using CORS proxy
       function loadEvents() {
+        // Check if running from file:// protocol (local file)
+        if (window.location.protocol === 'file:') {
+          console.warn('Running from file:// protocol - CORS will block fetch requests');
+          const loadingSpinner = document.getElementById('events-loading');
+          if (loadingSpinner) {
+            loadingSpinner.style.display = 'none';
+          }
+          eventsContainer.innerHTML = `<p style="text-align: center; padding: 2rem; color: #999;">Please open this page from a web server (not file://) to load events.<br><small style="font-size: 0.8rem;">Use a local server like: python -m http.server 8000</small></p>`;
+          return;
+        }
+        
         // Use CORS proxy to fetch CSV
         fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(csvUrl)}`)
           .then(response => {
@@ -1273,7 +1307,14 @@ if (contactForm) {
             if (loadingSpinner) {
               loadingSpinner.style.display = 'none';
             }
-            eventsContainer.innerHTML = `<p style="text-align: center; padding: 2rem; color: #999;">Unable to load events at this time. Please check back later.<br><small style="font-size: 0.8rem;">Error: ${error.message}</small></p>`;
+            
+            // Provide helpful error message
+            let errorMsg = 'Unable to load events at this time. Please check back later.';
+            if (window.location.protocol === 'file:') {
+              errorMsg = 'Please open this page from a web server (not file://) to load events.';
+            }
+            
+            eventsContainer.innerHTML = `<p style="text-align: center; padding: 2rem; color: #999;">${errorMsg}<br><small style="font-size: 0.8rem;">Error: ${error.message}</small></p>`;
           });
       }
 
