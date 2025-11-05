@@ -1320,7 +1320,7 @@
       display: none !important;
     }
     
-    #mailerlite-modal .mailerlite-input {
+    #mailerlite-modal .ml-form-embedBody .ml-form-fieldRow input.form-control {
       width: 100% !important;
       padding: 0.875rem !important;
       border: 1px solid #ddd !important;
@@ -1334,17 +1334,17 @@
       min-height: 44px;
     }
     
-    #mailerlite-modal .mailerlite-input:focus {
+    #mailerlite-modal .ml-form-embedBody .ml-form-fieldRow input.form-control:focus {
       outline: none;
       border-color: var(--accent-color) !important;
       box-shadow: 0 0 0 2px rgba(214, 152, 40, 0.2);
     }
     
-    #mailerlite-modal .mailerlite-input::placeholder {
+    #mailerlite-modal .ml-form-embedBody .ml-form-fieldRow input.form-control::placeholder {
       color: #999 !important;
     }
     
-    #mailerlite-modal .mailerlite-submit {
+    #mailerlite-modal .ml-form-embedSubmit button.primary {
       width: 100% !important;
       padding: 0.875rem 1.5rem !important;
       background-color: var(--accent-color) !important;
@@ -1360,7 +1360,7 @@
       text-align: center;
     }
     
-    #mailerlite-modal .mailerlite-submit:hover {
+    #mailerlite-modal .ml-form-embedSubmit button.primary:hover {
       background-color: #c0871f !important;
       transform: translateY(-1px);
     }
